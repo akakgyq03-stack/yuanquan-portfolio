@@ -1,0 +1,28 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="509.599" height="22.1517" viewBox="0 0 509.599 22.1517" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Group 784" filter="url(#filter0_d_0_11)">
+<line id="Line 39" x1="4" y1="6.97033" x2="504.099" y2="6.97033" stroke="#5E8143" stroke-width="1.5"/>
+<line id="Line 40" x1="4.75" x2="4.75" y2="14.1517" stroke="#5E8143" stroke-width="1.5"/>
+<line id="Line 41" x1="54.7597" x2="54.7597" y2="14.1517" stroke="#5E8143" stroke-width="1.5"/>
+<line id="Line 42" x1="104.769" x2="104.769" y2="14.1517" stroke="#5E8143" stroke-width="1.5"/>
+<line id="Line 43" x1="154.779" x2="154.779" y2="14.1517" stroke="#5E8143" stroke-width="1.5"/>
+<line id="Line 44" x1="204.791" x2="204.791" y2="14.1517" stroke="#5E8143" stroke-width="1.5"/>
+<line id="Line 45" x1="254.801" x2="254.801" y2="14.1517" stroke="#5E8143" stroke-width="1.5"/>
+<line id="Line 46" x1="304.81" x2="304.81" y2="14.1517" stroke="#5E8143" stroke-width="1.5"/>
+<line id="Line 47" x1="354.818" x2="354.818" y2="14.1517" stroke="#5E8143" stroke-width="1.5"/>
+<line id="Line 48" x1="404.828" x2="404.828" y2="14.1517" stroke="#5E8143" stroke-width="1.5"/>
+<line id="Line 49" x1="454.837" x2="454.837" y2="14.1517" stroke="#5E8143" stroke-width="1.5"/>
+<line id="Line 50" x1="504.849" x2="504.849" y2="14.1517" stroke="#5E8143" stroke-width="1.5"/>
+</g>
+<defs>
+<filter id="filter0_d_0_11" x="0" y="0" width="509.599" height="22.1517" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="4"/>
+<feGaussianBlur stdDeviation="2"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_0_11"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_0_11" result="shape"/>
+</filter>
+</defs>
+</svg>

@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-30T17:50:32.3546131Z",
+  "title": "Design System: Yuan Quan Portfolio",
+  "extensions": {
+    "colorMeta": {
+      "near-black": { "role": "primary", "displayName": "Near Black", "canonical": "#050505", "tonalRamp": ["#050505", "#151515", "#2b2b2b", "#474747", "#686868", "#919191", "#c3c3c3", "#f5f5f5"] },
+      "paper-white": { "role": "neutral", "displayName": "Paper White", "canonical": "#ffffff", "tonalRamp": ["#202020", "#3b3b3b", "#595959", "#7a7a7a", "#9e9e9e", "#c4c4c4", "#e6e6e6", "#ffffff"] },
+      "quiet-gray": { "role": "neutral", "displayName": "Quiet Gray", "canonical": "#a4a4a4", "tonalRamp": ["#242424", "#393939", "#505050", "#696969", "#828282", "#9d9d9d", "#c3c3c3", "#ededed"] },
+      "scent-brown": { "role": "secondary", "displayName": "Archive Brown", "canonical": "#754b2c", "tonalRamp": ["#28170c", "#3c2413", "#50321d", "#654127", "#7c5232", "#9a6d49", "#c69b77", "#efd9c5"] },
+      "scent-green": { "role": "secondary", "displayName": "Scent Green", "canonical": "#bdf4b6", "tonalRamp": ["#183019", "#244c26", "#316a34", "#438b47", "#5eab61", "#82ca82", "#ace8a8", "#effdeb"] },
+      "pals-violet": { "role": "secondary", "displayName": "Pals Violet", "canonical": "#7e59ff", "tonalRamp": ["#21104d", "#321b70", "#452997", "#5a39bc", "#714ee0", "#8d70ff", "#b9a7ff", "#eeeaff"] },
+      "odor-teal": { "role": "secondary", "displayName": "Odor Teal", "canonical": "#00aeba", "tonalRamp": ["#002c30", "#00464b", "#006269", "#007f88", "#009da8", "#24bbc5", "#79dce1", "#e2fbfc"] },
+      "archive-green": { "role": "secondary", "displayName": "Archive Green", "canonical": "#627f56", "tonalRamp": ["#172315", "#253522", "#354a30", "#49613f", "#5f7b52", "#79976b", "#a5bea0", "#edf4eb"] },
+      "lab-acid": { "role": "secondary", "displayName": "Lab Acid", "canonical": "#baf848", "tonalRamp": ["#243207", "#3a500b", "#526f11", "#6d901b", "#89b528", "#a7d938", "#c9f876", "#f2ffd8"] },
+      "forest-green": { "role": "secondary", "displayName": "Forest Green", "canonical": "#35734a", "tonalRamp": ["#0d2515", "#153921", "#1f4f2e", "#2b663e", "#397f4f", "#539b67", "#87bd94", "#e4f3e6"] },
+      "stitch-red": { "role": "secondary", "displayName": "Stitch Red", "canonical": "#b72443", "tonalRamp": ["#360811", "#52101e", "#70172a", "#8f1e36", "#ae2743", "#cc4560", "#e88da0", "#fde8ed"] },
+      "gallery-beige": { "role": "secondary", "displayName": "Gallery Beige", "canonical": "#d9c7ae", "tonalRamp": ["#30281f", "#4a3d2f", "#655441", "#806d56", "#9d886e", "#b9a489", "#d8c6ab", "#f7f1e9"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Editorial Display", "purpose": "Identity and project titles only." },
+      "headline": { "displayName": "Chapter Headline", "purpose": "Major sections and case-study chapters." },
+      "body": { "displayName": "Evidence Body", "purpose": "Readable Chinese and English context." },
+      "label": { "displayName": "Index Label", "purpose": "Navigation, roles, dates, and metadata." }
+    },
+    "shadows": [],
+    "motion": [
+      { "name": "image-hover", "value": "600ms cubic-bezier(.2,.8,.2,1)", "purpose": "Subtle image enlargement on pointer hover." },
+      { "name": "section-scroll", "value": "smooth", "purpose": "Chapter and top navigation when reduced motion is not requested." }
+    ],
+    "breakpoints": [
+      { "name": "mobile", "value": "560px" },
+      { "name": "gallery-stack", "value": "760px" },
+      { "name": "hero-stack", "value": "880px" },
+      { "name": "index-collapse", "value": "1020px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Site Header",
+      "kind": "nav",
+      "description": "Quiet global identity and contact strip.",
+      "html": "<nav class=\"ds-site-header\"><strong>袁泉 / YUAN QUAN</strong><a href=\"mailto:13187688338@163.com\">CONTACT</a></nav>",
+      "css": ".ds-site-header{align-items:center;background:#050505;color:#fff;border-bottom:1px solid #333;display:flex;justify-content:space-between;min-height:72px;padding:0 48px;font:650 11px/1.2 'Noto Sans SC',system-ui,sans-serif;letter-spacing:.08em}.ds-site-header a{color:inherit;text-underline-offset:5px;text-decoration-color:transparent}.ds-site-header a:hover{text-decoration-color:currentColor}.ds-site-header a:focus-visible{outline:2px solid #fff;outline-offset:4px}"
+    },
+    {
+      "name": "Directory Item",
+      "kind": "nav",
+      "refersTo": "directory-item",
+      "description": "A chapter control for the sticky project axis.",
+      "html": "<button class=\"ds-directory-item\" aria-current=\"location\">04 目标用户</button>",
+      "css": ".ds-directory-item{background:transparent;border:0;border-bottom:2px solid #7e59ff;color:#fff;cursor:pointer;height:58px;padding:0 25px;font:700 12px/1.2 'Noto Sans SC',system-ui,sans-serif;white-space:nowrap}.ds-directory-item:hover{color:#fff}.ds-directory-item:focus-visible{outline:2px solid #7e59ff;outline-offset:4px}"
+    },
+    {
+      "name": "Project Hero",
+      "kind": "custom",
+      "description": "Split editorial first viewport with project facts and authored cover imagery.",
+      "html": "<section class=\"ds-project-hero\"><div><small>AI PRODUCT · UX</small><b>02</b><h1>香迹档案</h1><p>Character Olfactory Archive</p></div><div class=\"ds-project-cover\"></div></section>",
+      "css": ".ds-project-hero{background:#754b2c;color:#fff8df;display:grid;grid-template-columns:.9fr 1.1fr;min-height:640px;font-family:'Noto Sans SC',system-ui,sans-serif}.ds-project-hero>div:first-child{align-self:center;padding:80px}.ds-project-hero small{color:#dec8a7;letter-spacing:.08em}.ds-project-hero b{display:block;font-size:84px;line-height:.9;margin-top:56px}.ds-project-hero h1{font-size:72px;line-height:.96;margin:18px 0 0}.ds-project-cover{background:#bdf4b6}.ds-project-hero:focus-within{outline:2px solid #bdf4b6;outline-offset:-4px}"
+    },
+    {
+      "name": "Evidence Plate",
+      "kind": "card",
+      "description": "Sharp image plate used inside the twelve-column evidence gallery.",
+      "html": "<figure class=\"ds-evidence-plate\"><div>AUTHORED FIGMA ASSET</div></figure>",
+      "css": ".ds-evidence-plate{align-items:center;background:#111;color:#a4a4a4;display:flex;justify-content:center;min-height:220px;margin:0;overflow:hidden;font:650 11px/1.2 'Noto Sans SC',system-ui,sans-serif;letter-spacing:.08em}.ds-evidence-plate:hover{color:#fff}.ds-evidence-plate:focus-within{outline:2px solid #fff;outline-offset:4px}"
+    },
+    {
+      "name": "Copy Link Button",
+      "kind": "button",
+      "description": "Text-only project utility action.",
+      "html": "<button class=\"ds-copy-link\">COPY LINK</button>",
+      "css": ".ds-copy-link{background:none;border:0;color:#fff;cursor:pointer;padding:12px 0;font:650 11px/1.2 'Noto Sans SC',system-ui,sans-serif;letter-spacing:.08em}.ds-copy-link:hover{text-decoration:underline;text-underline-offset:5px}.ds-copy-link:focus-visible{outline:2px solid #fff;outline-offset:4px}"
+    },
+    {
+      "name": "Project Pager Link",
+      "kind": "nav",
+      "description": "Large typographic previous/next project transition.",
+      "html": "<a class=\"ds-project-pager\" href=\"#\"><span>NEXT →</span><strong>Pals Go</strong></a>",
+      "css": ".ds-project-pager{color:#fff;display:flex;flex-direction:column;gap:12px;justify-content:center;min-height:130px;text-decoration:none;font-family:'Noto Sans SC',system-ui,sans-serif}.ds-project-pager span{color:#a4a4a4;font-size:10px;letter-spacing:.08em}.ds-project-pager strong{font-size:28px}.ds-project-pager:hover strong{text-decoration:underline;text-underline-offset:6px}.ds-project-pager:focus-visible{outline:2px solid #fff;outline-offset:4px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Evidence Ledger",
+    "overview": "The portfolio behaves like a carefully edited record of practice: restrained shared chrome frames dense, authored project evidence. The home establishes one near-black editorial world, while each case study is allowed to keep the palette, imagery, and material character inherited from its Figma source. Hierarchy comes from scale, spacing, hairline rules, and the work itself. Motion is limited to navigation state, focus, image reveal, and modest hover enlargement so it never competes with long-form reading.",
+    "keyCharacteristics": [
+      "Near-black editorial index with high-contrast bilingual type.",
+      "Project-specific color worlds connected by one quiet navigation language.",
+      "Twelve-column evidence mosaics on desktop and single-column reading order on mobile.",
+      "Sharp, flat interface chrome; the authored imagery supplies texture and depth."
+    ],
+    "rules": [
+      { "name": "The Project Owns the Accent Rule", "body": "Shared chrome inherits the current project's variables; it does not impose a global brand accent.", "section": "colors" },
+      { "name": "The Evidence Before Decoration Rule", "body": "Saturated color must clarify a project's authored world or state, never decorate an otherwise neutral page.", "section": "colors" },
+      { "name": "The Two-Scale Rule", "body": "Every first viewport needs one unmistakable display voice and one quiet evidence layer; avoid filling the middle with competing title sizes.", "section": "typography" },
+      { "name": "The Flat Chrome Rule", "body": "Navigation, buttons, and containers use rules and tonal contrast rather than ambient shadows.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do let exact project evidence occupy most of each case-study page.",
+      "Do inherit shared chrome colors from the current project's surface, ink, muted, and accent variables.",
+      "Do preserve hash-addressable chapters, browser history, visible focus, and reduced-motion behavior.",
+      "Do reflow long research boards into a readable single column on mobile."
+    ],
+    "donts": [
+      "Don't replace project-specific worlds with one generic portfolio card style.",
+      "Don't add drop shadows, ornamental gradients, rounded global cards, or decorative glyph icons to shared chrome.",
+      "Don't crop diagrams or research boards in a way that removes authored evidence.",
+      "Don't publish temporary Figma URLs, phone numbers, or unlabeled synthetic project claims."
+    ]
+  }
+}
