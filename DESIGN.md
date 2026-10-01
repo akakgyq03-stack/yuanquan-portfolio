@@ -5,6 +5,8 @@ colors:
   near-black: "#050505"
   paper-white: "#ffffff"
   quiet-gray: "#a4a4a4"
+  middle-gray: "#8a8a8a"
+  warm-secondary-ink: "#d8d1c9"
   scent-brown: "#754b2c"
   scent-green: "#bdf4b6"
   pals-violet: "#7e59ff"
@@ -15,25 +17,26 @@ colors:
   stitch-red: "#b72443"
   gallery-beige: "#d9c7ae"
 typography:
+  figmaRamp: "9px 10px 11px 12px 13px 14px 15px 16px 18px 19px 20px 21px 22px 28px 30px 32px 38px 44px 46px 48px 50px 54px 58px 64px 68px 82px 84px 92px 104px 112px"
   display:
-    fontFamily: "Noto Sans SC, PingFang SC, Microsoft YaHei, system-ui, sans-serif"
+    fontFamily: "Noto Sans SC Variable, Noto Sans SC, PingFang SC, Microsoft YaHei, system-ui, sans-serif"
     fontSize: "clamp(44px, 6.3vw, 92px)"
     fontWeight: 760
     lineHeight: 0.96
     letterSpacing: "-0.04em"
   headline:
-    fontFamily: "Noto Sans SC, PingFang SC, Microsoft YaHei, system-ui, sans-serif"
+    fontFamily: "Noto Sans SC Variable, Noto Sans SC, PingFang SC, Microsoft YaHei, system-ui, sans-serif"
     fontSize: "clamp(32px, 4.4vw, 68px)"
     fontWeight: 700
     lineHeight: 1.08
     letterSpacing: "-0.035em"
   body:
-    fontFamily: "Noto Sans SC, PingFang SC, Microsoft YaHei, system-ui, sans-serif"
+    fontFamily: "Noto Sans SC Variable, Noto Sans SC, PingFang SC, Microsoft YaHei, system-ui, sans-serif"
     fontSize: "clamp(15px, 1.3vw, 19px)"
     fontWeight: 400
     lineHeight: 1.75
   label:
-    fontFamily: "Noto Sans SC, PingFang SC, Microsoft YaHei, system-ui, sans-serif"
+    fontFamily: "Noto Sans SC Variable, Noto Sans SC, PingFang SC, Microsoft YaHei, system-ui, sans-serif"
     fontSize: "11px"
     fontWeight: 650
     lineHeight: 1.2
@@ -98,7 +101,8 @@ The base system is monochrome and restrained; saturated hues appear only where a
 
 ### Neutral
 
-- **Quiet Gray:** Secondary copy, metadata, captions, inactive navigation, and evidence labels.
+- **Quiet and Middle Gray:** Secondary copy, metadata, captions, inactive navigation, and evidence labels.
+- **Warm Secondary Ink:** Supporting copy on the brown scent-archive surface.
 
 ### Named Rules
 
@@ -108,8 +112,10 @@ The base system is monochrome and restrained; saturated hues appear only where a
 
 ## Typography
 
-**Display Font:** Noto Sans SC with PingFang SC, Microsoft YaHei, and system sans fallbacks  
-**Body Font:** Noto Sans SC with the same CJK-safe system stack  
+**Display Font:** Self-hosted Noto Sans SC Variable with PingFang SC, Microsoft YaHei, and system sans fallbacks
+
+**Body Font:** Self-hosted Noto Sans SC Variable with the same CJK-safe system stack
+
 **Label Font:** The same sans family in compact uppercase Latin metadata
 
 **Character:** Heavy, tightly tracked display type gives the portfolio an editorial cover-like presence. Body copy stays neutral and highly readable across Chinese and English, while small labels act as quiet indexing marks.
@@ -121,13 +127,15 @@ The base system is monochrome and restrained; saturated hues appear only where a
 - **Body** (weight 400, fluid 15–19px, line-height 1.75): summaries and chapter context, generally limited to 64 characters per line.
 - **Label** (weight 650, 11px, 0.08em tracking): metadata, navigation, roles, dates, and structural cues.
 
+The implementation also preserves the Figma source's compact 9–14px metadata steps and route-specific fluid display endpoints. These are intentional authored exceptions recorded in the `figmaRamp` token rather than accidental type drift.
+
 ### Named Rules
 
 **The Two-Scale Rule.** Every first viewport needs one unmistakable display voice and one quiet evidence layer; avoid filling the middle with competing title sizes.
 
 ## Layout
 
-The shared maximum canvas is 1440px. Desktop project pages use a split hero and twelve-column evidence galleries; section padding scales from 76px to 150px and gutters from 24px to roughly 86px. At 880px the hero becomes a vertical stack, and at 760px evidence collapses into one intentional reading column. The directory remains sticky at the viewport top and becomes horizontally scrollable on narrow screens. No route may create document-level horizontal overflow.
+The shared maximum canvas is 1440px. Desktop project pages use a split hero and twelve-column evidence galleries; section padding scales from 76px to 150px and gutters from 24px to roughly 86px. At 880px the hero becomes a vertical stack, and at 760px evidence collapses into one intentional reading column. On the seven long-form case studies, the directory remains sticky at the viewport top and becomes horizontally scrollable on narrow screens. No route may create document-level horizontal overflow.
 
 ## Elevation & Depth
 

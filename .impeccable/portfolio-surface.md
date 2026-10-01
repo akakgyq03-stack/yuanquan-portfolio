@@ -20,8 +20,8 @@ Figma is the approved visual authority. Preserve factual copy and visible projec
 
 **STORY:** Visitors begin with capability and evidence indexes, enter a project, move along its chapter axis, and leave through adjacent projects or the work index.
 
-**FIRST VIEWPORT:** The home opens with contact, identity, positioning, and three evidence categories at the Figma scale. Project pages open with their authored hero and a directory axis directly below the global navigation.
+**FIRST VIEWPORT:** The home opens with contact, identity, positioning, and three evidence categories at the Figma scale. Long-form case studies open with their authored hero and a directory axis directly below the global navigation; AIGC and art showcase routes remain uninterrupted.
 
-**FORM:** Approved Figma composition; no concept replacement. The directory axis is sticky, hash-addressable, and responsive. Figma file key `gYBF4Qe1l8IdWkbvpNkmCX` is the measured reference.
+**FORM:** Approved Figma composition; no concept replacement. Where present, the directory axis is sticky, hash-addressable, and responsive. Figma file key `gYBF4Qe1l8IdWkbvpNkmCX` is the measured reference.
 
 **FINISH:** unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance

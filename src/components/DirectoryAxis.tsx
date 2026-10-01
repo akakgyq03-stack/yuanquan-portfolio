@@ -44,7 +44,8 @@ export function DirectoryAxis({ sections, projectId }: DirectoryAxisProps) {
     const current = track?.querySelector<HTMLElement>(`[data-section="${active}"]`)
     if (track && current) {
       const left = current.offsetLeft - (track.clientWidth - current.clientWidth) / 2
-      track.scrollTo({ left, behavior: userNavigated.current ? 'smooth' : 'auto' })
+      const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+      track.scrollTo({ left, behavior: userNavigated.current && !reducedMotion ? 'smooth' : 'auto' })
     }
     userNavigated.current = false
   }, [active])
@@ -54,7 +55,8 @@ export function DirectoryAxis({ sections, projectId }: DirectoryAxisProps) {
     programmaticTarget.current = id
     window.history.pushState({ ...window.history.state, section: id }, '', `${window.location.pathname}#${id}`)
     setActive(id)
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    document.getElementById(id)?.scrollIntoView({ behavior: reducedMotion ? 'auto' : 'smooth', block: 'start' })
   }
 
   const onKeyDown = (event: KeyboardEvent<HTMLButtonElement>, index: number) => {

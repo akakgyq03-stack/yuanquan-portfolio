@@ -41,7 +41,7 @@
       "kind": "nav",
       "description": "Quiet global identity and contact strip.",
       "html": "<nav class=\"ds-site-header\"><strong>袁泉 / YUAN QUAN</strong><a href=\"mailto:13187688338@163.com\">CONTACT</a></nav>",
-      "css": ".ds-site-header{align-items:center;background:#050505;color:#fff;border-bottom:1px solid #333;display:flex;justify-content:space-between;min-height:72px;padding:0 48px;font:650 11px/1.2 'Noto Sans SC',system-ui,sans-serif;letter-spacing:.08em}.ds-site-header a{color:inherit;text-underline-offset:5px;text-decoration-color:transparent}.ds-site-header a:hover{text-decoration-color:currentColor}.ds-site-header a:focus-visible{outline:2px solid #fff;outline-offset:4px}"
+      "css": ".ds-site-header{align-items:center;background:#050505;color:#fff;border-bottom:1px solid #333;display:flex;justify-content:space-between;min-height:72px;padding:0 48px;font:650 11px/1.2 'Noto Sans SC Variable','Noto Sans SC',system-ui,sans-serif;letter-spacing:.08em}.ds-site-header a{color:inherit;text-underline-offset:5px;text-decoration-color:transparent}.ds-site-header a:hover{text-decoration-color:currentColor}.ds-site-header a:focus-visible{outline:2px solid #fff;outline-offset:4px}"
     },
     {
       "name": "Directory Item",
@@ -49,35 +49,35 @@
       "refersTo": "directory-item",
       "description": "A chapter control for the sticky project axis.",
       "html": "<button class=\"ds-directory-item\" aria-current=\"location\">04 目标用户</button>",
-      "css": ".ds-directory-item{background:transparent;border:0;border-bottom:2px solid #7e59ff;color:#fff;cursor:pointer;height:58px;padding:0 25px;font:700 12px/1.2 'Noto Sans SC',system-ui,sans-serif;white-space:nowrap}.ds-directory-item:hover{color:#fff}.ds-directory-item:focus-visible{outline:2px solid #7e59ff;outline-offset:4px}"
+      "css": ".ds-directory-item{background:transparent;border:0;border-bottom:2px solid #7e59ff;color:#fff;cursor:pointer;height:58px;padding:0 25px;font:700 12px/1.2 'Noto Sans SC Variable','Noto Sans SC',system-ui,sans-serif;white-space:nowrap}.ds-directory-item:hover{color:#fff}.ds-directory-item:focus-visible{outline:2px solid #7e59ff;outline-offset:4px}"
     },
     {
       "name": "Project Hero",
       "kind": "custom",
       "description": "Split editorial first viewport with project facts and authored cover imagery.",
       "html": "<section class=\"ds-project-hero\"><div><small>AI PRODUCT · UX</small><b>02</b><h1>香迹档案</h1><p>Character Olfactory Archive</p></div><div class=\"ds-project-cover\"></div></section>",
-      "css": ".ds-project-hero{background:#754b2c;color:#fff8df;display:grid;grid-template-columns:.9fr 1.1fr;min-height:640px;font-family:'Noto Sans SC',system-ui,sans-serif}.ds-project-hero>div:first-child{align-self:center;padding:80px}.ds-project-hero small{color:#dec8a7;letter-spacing:.08em}.ds-project-hero b{display:block;font-size:84px;line-height:.9;margin-top:56px}.ds-project-hero h1{font-size:72px;line-height:.96;margin:18px 0 0}.ds-project-cover{background:#bdf4b6}.ds-project-hero:focus-within{outline:2px solid #bdf4b6;outline-offset:-4px}"
+      "css": ".ds-project-hero{background:#754b2c;color:#fff8df;display:grid;grid-template-columns:.9fr 1.1fr;min-height:640px;font-family:'Noto Sans SC Variable','Noto Sans SC',system-ui,sans-serif}.ds-project-hero>div:first-child{align-self:center;padding:80px}.ds-project-hero small{color:#dec8a7;letter-spacing:.08em}.ds-project-hero b{display:block;font-size:84px;line-height:.9;margin-top:56px}.ds-project-hero h1{font-size:72px;line-height:.96;margin:18px 0 0}.ds-project-cover{background:#bdf4b6}.ds-project-hero:focus-within{outline:2px solid #bdf4b6;outline-offset:-4px}"
     },
     {
       "name": "Evidence Plate",
       "kind": "card",
       "description": "Sharp image plate used inside the twelve-column evidence gallery.",
       "html": "<figure class=\"ds-evidence-plate\"><div>AUTHORED FIGMA ASSET</div></figure>",
-      "css": ".ds-evidence-plate{align-items:center;background:#111;color:#a4a4a4;display:flex;justify-content:center;min-height:220px;margin:0;overflow:hidden;font:650 11px/1.2 'Noto Sans SC',system-ui,sans-serif;letter-spacing:.08em}.ds-evidence-plate:hover{color:#fff}.ds-evidence-plate:focus-within{outline:2px solid #fff;outline-offset:4px}"
+      "css": ".ds-evidence-plate{align-items:center;background:#111;color:#a4a4a4;display:flex;justify-content:center;min-height:220px;margin:0;overflow:hidden;font:650 11px/1.2 'Noto Sans SC Variable','Noto Sans SC',system-ui,sans-serif;letter-spacing:.08em}.ds-evidence-plate:hover{color:#fff}.ds-evidence-plate:focus-within{outline:2px solid #fff;outline-offset:4px}"
     },
     {
       "name": "Copy Link Button",
       "kind": "button",
       "description": "Text-only project utility action.",
       "html": "<button class=\"ds-copy-link\">COPY LINK</button>",
-      "css": ".ds-copy-link{background:none;border:0;color:#fff;cursor:pointer;padding:12px 0;font:650 11px/1.2 'Noto Sans SC',system-ui,sans-serif;letter-spacing:.08em}.ds-copy-link:hover{text-decoration:underline;text-underline-offset:5px}.ds-copy-link:focus-visible{outline:2px solid #fff;outline-offset:4px}"
+      "css": ".ds-copy-link{background:none;border:0;color:#fff;cursor:pointer;padding:12px 0;font:650 11px/1.2 'Noto Sans SC Variable','Noto Sans SC',system-ui,sans-serif;letter-spacing:.08em}.ds-copy-link:hover{text-decoration:underline;text-underline-offset:5px}.ds-copy-link:focus-visible{outline:2px solid #fff;outline-offset:4px}"
     },
     {
       "name": "Project Pager Link",
       "kind": "nav",
       "description": "Large typographic previous/next project transition.",
       "html": "<a class=\"ds-project-pager\" href=\"#\"><span>NEXT →</span><strong>Pals Go</strong></a>",
-      "css": ".ds-project-pager{color:#fff;display:flex;flex-direction:column;gap:12px;justify-content:center;min-height:130px;text-decoration:none;font-family:'Noto Sans SC',system-ui,sans-serif}.ds-project-pager span{color:#a4a4a4;font-size:10px;letter-spacing:.08em}.ds-project-pager strong{font-size:28px}.ds-project-pager:hover strong{text-decoration:underline;text-underline-offset:6px}.ds-project-pager:focus-visible{outline:2px solid #fff;outline-offset:4px}"
+      "css": ".ds-project-pager{color:#fff;display:flex;flex-direction:column;gap:12px;justify-content:center;min-height:130px;text-decoration:none;font-family:'Noto Sans SC Variable','Noto Sans SC',system-ui,sans-serif}.ds-project-pager span{color:#a4a4a4;font-size:10px;letter-spacing:.08em}.ds-project-pager strong{font-size:28px}.ds-project-pager:hover strong{text-decoration:underline;text-underline-offset:6px}.ds-project-pager:focus-visible{outline:2px solid #fff;outline-offset:4px}"
     }
   ],
   "narrative": {

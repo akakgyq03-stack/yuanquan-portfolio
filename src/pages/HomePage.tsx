@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { SiteHeader } from '../components/SiteHeader'
+import { FigmaImage } from '../components/FigmaImage'
 import { assetsByNode } from '../data/assetManifest'
 import { projects } from '../data/projects'
 import { applyPageMeta } from '../lib/pageMeta'
@@ -31,6 +32,7 @@ export default function HomePage() {
       title: '袁泉 / Yuan Quan — Portfolio',
       description: '袁泉的 AI 产品、AIGC、用户研究与交互设计作品集。',
       path: '/',
+      image: homeImages[0]?.src,
     })
   }, [])
 
@@ -71,7 +73,7 @@ export default function HomePage() {
                 </div>
                 {homeImages[index] && (
                   <Link className={styles.preview} to={`/projects/${capability.ids[0]}`}>
-                    <img alt={`${capability.title}项目预览`} height={homeImages[index].height} loading="lazy" src={homeImages[index].src} width={homeImages[index].width} />
+                    <FigmaImage alt={`${capability.title}项目预览`} asset={homeImages[index]} loading="lazy" sizes="240px" />
                   </Link>
                 )}
               </div>
@@ -87,7 +89,7 @@ export default function HomePage() {
           <div className={styles.productGrid}>
             {productCards.map((card, index) => (
               <Link className={styles.productCard} key={card.id} to={`/projects/${card.id}`}>
-                <figure>{productImages[index] && <img alt={`${card.title}项目封面`} height={productImages[index].height} loading="lazy" src={productImages[index].src} width={productImages[index].width} />}</figure>
+                <figure>{productImages[index] && <FigmaImage alt={`${card.title}项目封面`} asset={productImages[index]} loading="lazy" sizes="(max-width: 680px) 100vw, (max-width: 1020px) 50vw, 25vw" />}</figure>
                 <span>{String(index + 1).padStart(2, '0')}</span>
                 <h3>{card.title}</h3>
                 <p>{card.caption}</p>

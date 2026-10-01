@@ -19,6 +19,13 @@ export interface ProjectSection {
   description?: string
   nodeIds: string[]
   layout?: 'feature' | 'grid' | 'mosaic' | 'editorial'
+  subsections?: Array<{
+    id: string
+    label: string
+    title: string
+    nodeId: string
+    layout?: 'feature' | 'grid' | 'mosaic' | 'editorial'
+  }>
 }
 
 export interface ProjectDefinition {
@@ -33,13 +40,14 @@ export interface ProjectDefinition {
   theme: ProjectTheme
   figmaNodes: string[]
   sections: ProjectSection[]
+  showDirectory?: boolean
 }
 
 export const projects: ProjectDefinition[] = [
   {
     id: 'aigc-creative-practice', number: '01', title: 'AIGC 创作实践', englishTitle: 'AIGC Creative Practice',
     category: 'AIGC 创作', summary: '从内容账号到系列化图像与视频创作，探索风格控制、场景一致性与角色表达。',
-    role: 'Independent Creator', period: '2024—2025', theme: 'ink', figmaNodes: ['535:942'],
+    role: 'Independent Creator', period: '2024—2025', theme: 'ink', figmaNodes: ['535:942'], showDirectory: false,
     sections: [
       { id: 'overview', label: '项目概览', title: '视频与图像内容创作', description: '以真实创作者身份持续进行 AIGC 内容实验，并将创作方法沉淀为可复用的视觉流程。', nodeIds: ['535:942'], layout: 'feature' },
       { id: 'content-account', label: '内容账号', title: 'AIGC 内容账号', description: '围绕内容发布、受众反馈与系列化表达验证创作方向。', nodeIds: ['535:942'], layout: 'editorial' },
@@ -60,7 +68,14 @@ export const projects: ProjectDefinition[] = [
       { id: 'competitive-gap', label: '03 竞争缺口', title: '竞争缺口', nodeIds: ['66:2'], layout: 'grid' },
       { id: 'target-users', label: '04 目标用户', title: 'Target Users', nodeIds: ['502:570'], layout: 'editorial' },
       { id: 'product-value', label: '05 产品价值', title: '产品价值', nodeIds: ['502:597'], layout: 'grid' },
-      { id: 'core-mechanism', label: '06 核心机制', title: '角色弧光 × 香水结构 × 调香规则', description: '以角色经历为主线，在结构化规则约束下生成完整香水方案。', nodeIds: ['166:2', '166:3', '166:4'], layout: 'mosaic' },
+      {
+        id: 'core-mechanism', label: '06 核心机制', title: '角色弧光 × 香水结构 × 调香规则', description: '以角色经历为主线，在结构化规则约束下生成完整香水方案。', nodeIds: ['166:2', '166:3', '166:4'], layout: 'mosaic',
+        subsections: [
+          { id: 'creative-thread', label: '06.1', title: '将角色信息聚合为香水创作主线', nodeId: '166:2', layout: 'editorial' },
+          { id: 'character-arc', label: '06.2', title: '把人物弧光，转译成香水结构', nodeId: '166:3', layout: 'feature' },
+          { id: 'perfume-rules', label: '06.3', title: '用调香规则，约束 AI 的香材生成', nodeId: '166:4', layout: 'feature' },
+        ],
+      },
       { id: 'final-output', label: '07 最终产出', title: '最终产出', nodeIds: ['197:2'], layout: 'feature' },
       { id: 'ux-visual', label: '08 UX 与视觉', title: 'UX 语言与视觉系统', nodeIds: ['66:101'], layout: 'mosaic' },
     ],
@@ -122,7 +137,8 @@ export const projects: ProjectDefinition[] = [
       {id:'technology',label:'技术框架',title:'NLP、随机森林与感官关联预测',nodeIds:['537:1570'],layout:'grid'},
       {id:'concept',label:'设计概念',title:'从文字到气味',nodeIds:['537:1631'],layout:'editorial'},
       {id:'visualization',label:'感官可视化',title:'温度、颜色与味觉的动态映射',nodeIds:['537:1698'],layout:'mosaic'},
-      {id:'interface',label:'信息架构与界面',title:'信息架构与交互界面',nodeIds:['537:1766'],layout:'feature'},
+      {id:'architecture',label:'信息架构',title:'信息架构',nodeIds:['537:1766'],layout:'grid'},
+      {id:'interface',label:'交互界面',title:'交互界面',nodeIds:['537:1766'],layout:'feature'},
     ],
   },
   {
@@ -159,7 +175,7 @@ export const projects: ProjectDefinition[] = [
   {
     id: 'art-exhibitions', number: '09', title: '艺术展览作品', englishTitle: 'Art & Installation Works',
     category: '装置艺术与工业设计', summary: 'DreamCipher 梦匣与 Carbon–Silicon Symbiosis：关于睡眠仪式、智能技术与未来自然的两组作品。',
-    role: 'Industrial / Installation Art', period: '2025—2026', theme: 'gallery', figmaNodes: ['563:48071'],
+    role: 'Industrial / Installation Art', period: '2025—2026', theme: 'gallery', figmaNodes: ['563:48071'], showDirectory: false,
     sections: [
       {id:'overview',label:'作品总览',title:'艺术展览作品',nodeIds:['563:48071'],layout:'feature'},
       {id:'dream-cipher',label:'DreamCipher 梦匣',title:'DreamCipher 梦匣',description:'一款面向睡眠场景的 AI 声音生成装置，通过三层旋转密码环构建远离屏幕的睡前仪式。',nodeIds:['563:48071'],layout:'feature'},

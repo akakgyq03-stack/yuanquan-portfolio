@@ -1,4 +1,5 @@
 import type { FigmaAsset } from '../data/assetManifest'
+import { FigmaImage } from './FigmaImage'
 import styles from './AssetGallery.module.css'
 
 interface AssetGalleryProps {
@@ -16,13 +17,12 @@ export function AssetGallery({ assets, projectTitle, layout = 'grid', skipFirst 
     <div className={styles.gallery} data-layout={layout}>
       {visible.map((asset, index) => (
         <figure className={styles.figure} key={`${asset.src}-${index}`}>
-          <img
+          <FigmaImage
             alt={`${projectTitle} 项目素材：${humanize(asset.name)}`}
+            asset={asset}
             decoding="async"
-            height={asset.height}
             loading="lazy"
-            src={asset.src}
-            width={asset.width}
+            sizes="(max-width: 760px) 100vw, 50vw"
           />
         </figure>
       ))}

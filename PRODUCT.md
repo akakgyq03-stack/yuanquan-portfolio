@@ -29,7 +29,7 @@ Visitors arrive from applications, resumes, direct links, and interviews. They p
 ## Capabilities and Constraints
 
 - One home route and nine project routes.
-- Each project has a sticky in-page directory axis with deep links.
+- Seven long-form case studies have a sticky in-page directory axis with deep links; AIGC Creative Practice and Art & Installation Works intentionally read as uninterrupted showcases.
 - Public email only; no phone number, form, CMS, analytics, authentication, or server functions.
 - The Figma page `18:2` is the source of truth. Hidden layers and obvious working boards are excluded.
 - Public GitHub repository and free Cloudflare Pages `pages.dev` deployment.

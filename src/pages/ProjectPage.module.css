@@ -42,6 +42,7 @@
 .meta dd { font-size: 13px; margin: 0; }
 
 .heroMedia { background: var(--surface-alt); margin: 0; min-height: 640px; overflow: hidden; }
+.heroMedia picture { display: block; height: 100%; }
 .heroMedia img { height: 100%; object-fit: cover; width: 100%; }
 .page[data-theme='paper'] .heroMedia img,
 .page[data-theme='teal'] .heroMedia img { object-fit: contain; }
@@ -61,6 +62,18 @@
 .textPlate span { color: var(--muted); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; }
 .textPlate strong { font-size: 18px; }
 .textPlate p { color: var(--muted); line-height: 1.7; margin: 0; }
+
+.subsectionGroup { margin-top: clamp(46px, 7vw, 96px); }
+.subsectionProgress { border-bottom: 1px solid color-mix(in srgb, var(--ink) 22%, transparent); border-top: 1px solid color-mix(in srgb, var(--ink) 22%, transparent); display: grid; grid-template-columns: repeat(3, 1fr); }
+.subsectionProgress a { display: flex; flex-direction: column; gap: 10px; min-height: 96px; padding: 20px 22px; text-decoration: none; }
+.subsectionProgress a + a { border-left: 1px solid color-mix(in srgb, var(--ink) 18%, transparent); }
+.subsectionProgress span { color: var(--muted); font-size: 11px; letter-spacing: .08em; }
+.subsectionProgress strong { font-size: clamp(14px, 1.25vw, 18px); line-height: 1.45; }
+.subsection { padding-top: clamp(72px, 9vw, 128px); scroll-margin-top: 82px; }
+.subsection + .subsection { border-top: 1px solid color-mix(in srgb, var(--ink) 18%, transparent); margin-top: clamp(72px, 9vw, 128px); }
+.subsection header { display: grid; gap: 18px; max-width: 960px; }
+.subsection header span { color: var(--muted); font-size: 12px; letter-spacing: .08em; }
+.subsection h3 { font-size: clamp(28px, 4vw, 58px); letter-spacing: -.035em; line-height: 1.1; margin: 0; text-wrap: balance; }
 
 .close { margin: 0 auto; max-width: 1440px; padding: 80px clamp(24px, 6vw, 86px) 100px; }
 .closeTop { align-items: center; border-bottom: 1px solid color-mix(in srgb, var(--ink) 24%, transparent); display: flex; justify-content: space-between; padding-bottom: 18px; }
@@ -91,4 +104,8 @@
   .section { scroll-margin-top: 68px; }
   .sectionHeading { display: block; }
   .sectionIndex { margin-bottom: 22px; }
+  .subsectionProgress { display: flex; overflow-x: auto; scrollbar-width: none; }
+  .subsectionProgress::-webkit-scrollbar { display: none; }
+  .subsectionProgress a { flex: 0 0 78vw; min-height: 108px; }
+  .subsection { scroll-margin-top: 68px; }
 }

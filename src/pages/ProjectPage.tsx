@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from 'react'
 import { Link, Navigate, useParams } from 'react-router-dom'
 import { AssetGallery } from '../components/AssetGallery'
 import { DirectoryAxis } from '../components/DirectoryAxis'
+import { FigmaImage } from '../components/FigmaImage'
 import { SiteHeader } from '../components/SiteHeader'
 import { assetsByNode, type FigmaAsset } from '../data/assetManifest'
 import { adjacentProjects, projectById, type ProjectDefinition, type ProjectId, type ProjectSection } from '../data/projects'
@@ -12,6 +13,8 @@ export default function ProjectPage() {
   const { projectId } = useParams<{ projectId: ProjectId }>()
   const project = projectId ? projectById[projectId] : undefined
   const [copied, setCopied] = useState(false)
+  const allProjectAssets = useMemo(() => project ? collectProjectAssets(project) : [], [project])
+  const heroAsset = allProjectAssets.find((asset) => asset.kind === 'image')
 
   useEffect(() => {
     if (!project) return
@@ -20,14 +23,13 @@ export default function ProjectPage() {
       description: project.summary,
       path: `/projects/${project.id}`,
       themeColor: themeColors[project.theme] ?? '#050505',
+      image: heroAsset?.src,
     })
-  }, [project])
+  }, [heroAsset?.src, project])
 
-  const allProjectAssets = useMemo(() => project ? collectProjectAssets(project) : [], [project])
   if (!project) return <Navigate replace to="/404" />
 
   const { previous, next } = adjacentProjects(project.id)
-  const heroAsset = allProjectAssets.find((asset) => asset.kind === 'image')
 
   const copyLink = async () => {
     await navigator.clipboard.writeText(window.location.href)
@@ -55,12 +57,12 @@ export default function ProjectPage() {
           </div>
           {heroAsset && (
             <figure className={styles.heroMedia}>
-              <img alt={`${project.title} 项目封面`} fetchPriority="high" height={heroAsset.height} src={heroAsset.src} width={heroAsset.width} />
+              <FigmaImage alt={`${project.title} 项目封面`} asset={heroAsset} fetchPriority="high" sizes="(max-width: 880px) 100vw, 55vw" />
             </figure>
           )}
         </section>
 
-        <DirectoryAxis projectId={project.id} sections={project.sections} />
+        {project.showDirectory !== false && <DirectoryAxis projectId={project.id} sections={project.sections} />}
 
         <div className={styles.sections}>
           {project.sections.map((section, index) => {
@@ -74,7 +76,31 @@ export default function ProjectPage() {
                     {section.description && <p>{section.description}</p>}
                   </div>
                 </div>
-                {assets.length ? (
+                {section.subsections?.length ? (
+                  <div className={styles.subsectionGroup}>
+                    <nav aria-label="核心机制次级进度" className={styles.subsectionProgress}>
+                      {section.subsections.map((subsection) => (
+                        <a href={`#${section.id}-${subsection.id}`} key={subsection.id}>
+                          <span>{subsection.label}</span>
+                          <strong>{subsection.title}</strong>
+                        </a>
+                      ))}
+                    </nav>
+                    {section.subsections.map((subsection) => (
+                      <article className={styles.subsection} id={`${section.id}-${subsection.id}`} key={subsection.id}>
+                        <header>
+                          <span>{subsection.label} / 关键机制</span>
+                          <h3>{subsection.title}</h3>
+                        </header>
+                        <AssetGallery
+                          assets={unique(assetsByNode[subsection.nodeId] ?? [])}
+                          layout={subsection.layout}
+                          projectTitle={project.title}
+                        />
+                      </article>
+                    ))}
+                  </div>
+                ) : assets.length ? (
                   <AssetGallery
                     assets={assets}
                     layout={section.layout}

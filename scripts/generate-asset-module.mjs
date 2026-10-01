@@ -25,6 +25,9 @@ for (const asset of manifest.assets) {
       src: asset.publicPath,
       kind: asset.publicPath.endsWith('.svg') ? 'svg' : 'image',
       sourceNode: asset.nodeId,
+      avifSrc: asset.avifPublicPath,
+      avifSrcSet: asset.avifSrcSet,
+      webpSrcSet: asset.webpSrcSet,
       ...await dimensions(asset.publicPath),
     })
   }
@@ -32,7 +35,7 @@ for (const asset of manifest.assets) {
 }
 
 const output = `// Generated from figma-assets.json. Do not edit by hand.\n` +
-`export type FigmaAsset = { name: string; src: string; kind: 'image' | 'svg'; sourceNode: string; width?: number; height?: number }\n\n` +
+`export type FigmaAsset = { name: string; src: string; kind: 'image' | 'svg'; sourceNode: string; width?: number; height?: number; avifSrc?: string; avifSrcSet?: string; webpSrcSet?: string }\n\n` +
 `export const assetsByNode: Record<string, FigmaAsset[]> = ${JSON.stringify(Object.fromEntries(grouped), null, 2)}\n`
 
 await fs.writeFile(path.join(projectRoot, 'src', 'data', 'assetManifest.ts'), output)

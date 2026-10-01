@@ -13,6 +13,8 @@
   overflow: clip;
 }
 
+.figure picture { display: block; }
+
 .figure img {
   display: block;
   height: auto;

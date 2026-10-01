@@ -24,4 +24,4 @@ All routes are client-side routes. Cloudflare Pages automatically applies SPA fa
 
 ## Content
 
-The site contains one home page and nine project routes. Project directory axes use hash-addressable chapter links, active scroll tracking, keyboard navigation, and sticky mobile behavior.
+The site contains one home page and nine project routes. Seven long-form case studies use hash-addressable directory axes with active scroll tracking, keyboard navigation, and sticky mobile behavior; the AIGC and art showcase routes intentionally remain uninterrupted.

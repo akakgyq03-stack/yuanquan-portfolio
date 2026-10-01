@@ -39,6 +39,6 @@
 .top { margin-left: auto; }
 
 @media (max-width: 720px) {
-  .item { font-size: 11px; min-height: 50px; padding-inline: 13px; }
+  .item { font-size: 11px; min-height: 50px; min-width:44px; padding-inline: 13px; }
   .top { margin-left: 0; }
 }
