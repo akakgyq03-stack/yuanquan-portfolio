@@ -29,6 +29,7 @@ import Frame27 from '../../figma/generated/Pals_290_3305'
 import PalsMbtiFrame from '../../figma/PalsMbtiFrame'
 import { ResponsiveArtboard } from '../../figma/ResponsiveArtboard'
 import { CanvasProjectLayout } from './CanvasProjectLayout'
+import styles from './PalsPage.module.css'
 
 const directory = [
   { id: 'overview', label: '项目概览' }, { id: 'problem-insight', label: '问题洞察' },
@@ -43,13 +44,13 @@ export default function PalsPage() {
   return (
     <CanvasProjectLayout directory={directory} projectId="pals-go">
       <ResponsiveArtboard height={26415} label="Pals Go" width={1440}>
-        <div style={{ background: '#000', height: 26415, position: 'relative', width: 1440 }}>
+        <div className={styles.frames} style={{ background: '#000', height: 26415, position: 'relative', width: 1440 }}>
         <section id="overview" style={{ height: 810, left: 0, position: 'absolute', top: 0, width: 1440 }}><Frame0 /></section>
         <section style={{ height: 846, left: 0, position: 'absolute', top: 855, width: 1440 }}><Frame1 /></section>
         <section style={{ height: 846, left: 0, position: 'absolute', top: 1746, width: 1440 }}><Frame2 /></section>
         <section style={{ height: 846, left: 0, position: 'absolute', top: 2637, width: 1440 }}><Frame3 /></section>
         <section style={{ height: 846, left: 0, position: 'absolute', top: 3528, width: 1440 }}><Frame4 /></section>
-        <section id="problem-insight" style={{ height: 864, left: 0, position: 'absolute', top: 4494, width: 1440 }}><Frame5 /></section>
+        <section className={styles.phoneIntro} id="problem-insight" style={{ height: 864, left: 0, position: 'absolute', top: 4494, width: 1440 }}><Frame5 /></section>
         <section style={{ height: 864, left: 0, position: 'absolute', top: 5403, width: 1440 }}><Frame6 /></section>
         <section style={{ height: 864, left: 0, position: 'absolute', top: 6312, width: 1440 }}><Frame7 /></section>
         <section id="competitive-research" style={{ height: 864, left: 0, position: 'absolute', top: 7221, width: 1440 }}><Frame8 /></section>
@@ -64,7 +65,17 @@ export default function PalsPage() {
         <section style={{ height: 864, left: 0, position: 'absolute', top: 15477, width: 1440 }}><Frame17 /></section>
         <section id="data-analysis" style={{ height: 864, left: 0, position: 'absolute', top: 16386, width: 1440 }}><Frame18 /></section>
         <section style={{ height: 864, left: 0, position: 'absolute', top: 17295, width: 1440 }}><Frame19 /></section>
-        <section style={{ height: 864, left: 20, position: 'absolute', top: 18204, width: 1440 }}><Frame20 /></section>
+        <section className={styles.learningModel} style={{ height: 864, left: 0, position: 'absolute', top: 18204, width: 1440 }}>
+          <Frame20 />
+          <div aria-label="学习动机结构方程模型" className={styles.modelLabels}>
+            <span className={styles.selfAbility}>自身能力</span>
+            <span className={styles.feedback}>学习反馈</span>
+            <span className={styles.willingness}>学习意愿</span>
+            <span className={styles.effect}>学习效果</span>
+            <span className={styles.experience}>学习体验</span>
+            <i className={styles.h11}>H11</i><i className={styles.h12}>H12</i><i className={styles.h13}>H13</i>
+          </div>
+        </section>
         <section id="principles" style={{ height: 864, left: 0, position: 'absolute', top: 19113, width: 1440 }}><Frame21 /></section>
         <section id="final-design" style={{ height: 864, left: 0, position: 'absolute', top: 20097, width: 1440 }}><Frame22 /></section>
         <section style={{ height: 864, left: 0, position: 'absolute', top: 21006, width: 1440 }}><Frame23 /></section>

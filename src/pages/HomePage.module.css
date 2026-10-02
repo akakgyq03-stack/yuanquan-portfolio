@@ -1,11 +1,9 @@
 .page { background: #050505; min-height: 100vh; }
-.hotspots,
 .productHotspots { inset: 0; pointer-events: none; position: absolute; }
-.hotspots a,
 .productHotspots a { pointer-events: auto; position: absolute; }
 .emailHotspot { height: 58px; left: 80px; position: absolute; top: 56px; width: 620px; }
-.hotspots a { left: 80px; right: 80px; }
+.indexAnchor { left: 0; position: absolute; top: 770px; }
 .productHotspots a { height: 570px; top: 420px; }
-.hotspots a:focus-visible,
 .productHotspots a:focus-visible,
+.page [data-node-id="21:31"] a:focus-visible,
 .emailHotspot:focus-visible { outline: 4px solid #fff; outline-offset: -4px; }

@@ -56,11 +56,7 @@ export default function Web1440P04() {
         </div>
       </div>
       <div className="absolute border-[#66736c] border-[1.303px] border-solid h-0 left-[104.25px] top-[calc(100%-114.75px)] w-[1271.25px]" data-node-id="358:649" data-name="Rectangle" />
-      <div className="absolute flex h-[400.361px] items-center justify-center left-0 top-0 w-0" data-node-id="358:650">
-        <div className="flex-none rotate-180">
-          <div className="border-[#66736c] border-[1.303px] border-solid h-[-400.361px] relative w-0" data-name="Rectangle" />
-        </div>
-      </div>
+      <div className="absolute bg-[#66736c] h-[400.361px] left-[104.25px] top-[385px] w-[1.303px]" data-node-id="358:650" data-name="Rectangle" />
       <div className="absolute h-[34.395px] left-[646.22px] top-[calc(100%-17.99px)] w-[250.147px]" data-node-id="358:651" data-name="Frame">
         <div className="absolute h-[34.395px] left-0 top-0 w-[250.147px]" data-node-id="358:652" data-name="Rectangle" />
       </div>
@@ -68,7 +64,7 @@ export default function Web1440P04() {
         <p className="leading-[1.32]">方法选择灵活度</p>
       </div>
       <div className="absolute flex h-[187.5px] items-center justify-center left-[44.25px] top-[385px] w-[52.5px]" data-node-id="358:654">
-        <div className="flex-none rotate-90">
+        <div className="flex-none" style={{ transform: 'rotate(-90deg)' }}>
           <div className="h-[52.5px] relative w-[187.5px]" data-name="Frame">
             <div className="absolute h-[34.395px] left-0 top-0 w-[187.61px]" data-node-id="358:655" data-name="Rectangle" />
             <div className="-translate-y-1/2 [word-break:break-word] absolute flex flex-col font-['Noto_Sans_SC:Bold'] font-bold h-[34.395px] justify-center leading-[0] left-0 text-[#66736c] text-[27px] top-[17.2px] tracking-[-0.54px] w-[187.61px]" data-node-id="358:656">

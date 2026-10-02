@@ -9,15 +9,6 @@ import styles from './HomePage.module.css'
 
 const homeImage = assetsByNode['21:2']?.[0]?.src
 
-const homeHotspots = [
-  { label: '打开 AIGC 创作实践', path: '/projects/aigc-creative-practice', top: 1010, height: 365 },
-  { label: '打开 AI 产品项目', path: '/projects/perfume-lab', top: 1375, height: 365 },
-  { label: '打开 Pals Go', path: '/projects/pals-go', top: 1740, height: 365 },
-  { label: '打开 Pals Go 用户研究', path: '/projects/pals-go#research', top: 2105, height: 250 },
-  { label: '打开 Pals Go 运营', path: '/projects/pals-go#operation', top: 2355, height: 210 },
-  { label: '打开艺术展览作品', path: '/projects/art-exhibitions', top: 2565, height: 180 },
-]
-
 const productHotspots = [
   { label: '打开香迹档案', path: '/projects/perfume-lab', left: 80, width: 255 },
   { label: '打开 Pals Go', path: '/projects/pals-go', left: 408, width: 264 },
@@ -38,14 +29,10 @@ export default function HomePage() {
   return (
     <main className={styles.page} id="main">
       <a className="skip-link" href="#work-index">跳到作品索引</a>
-      <ResponsiveArtboard height={2748} label="袁泉作品集首页" width={1440}>
+      <ResponsiveArtboard height={2840} label="袁泉作品集首页" width={1440}>
         <HomeCanvas />
         <a aria-label="发送邮件至 13187688338@163.com" className={styles.emailHotspot} href="mailto:13187688338@163.com" />
-        <div className={styles.hotspots} id="work-index">
-          {homeHotspots.map((item) => (
-            <Link aria-label={item.label} key={item.path + item.top} style={{ height: item.height, top: item.top }} to={item.path} />
-          ))}
-        </div>
+        <span className={styles.indexAnchor} id="work-index" />
       </ResponsiveArtboard>
       <ResponsiveArtboard height={1321} label="AI 产品项目总览" width={1440}>
         <ProductOverview />

@@ -1,4 +1,5 @@
 import { assetSrc } from '../assetSrc'
+import { Link } from 'react-router-dom'
 
 const imgAigcPracticePreviewPlaceholder = assetSrc('21:2', 'imgAigcPracticePreviewPlaceholder');
 const imgPerfumeLabPreviewPlaceholder = assetSrc('21:2', 'imgPerfumeLabPreviewPlaceholder');
@@ -85,8 +86,8 @@ export default function Portfolio00Home() {
           <p className="font-['Noto_Sans_SC:Bold'] font-bold relative shrink-0 text-[34px] text-white w-[1280px]" data-node-id="39:4">
             作品索引
           </p>
-          <p className="font-['Noto_Sans_SC:Regular'] font-normal min-w-full relative shrink-0 text-[#b8b8b8] text-[15px] text-right w-[min-content]" data-node-id="39:5">
-            根据页码跳转阅读
+          <p className="absolute bottom-[28px] font-['Noto_Sans_SC:Regular'] font-normal right-0 text-[#b8b8b8] text-[15px] text-right w-[420px]" data-node-id="39:5">
+            点击项目名称和目录跳转查看。
           </p>
         </div>
         <div className="[word-break:break-word] content-stretch flex font-['Noto_Sans_SC:Regular'] font-normal gap-[40px] items-start leading-[normal] overflow-clip relative shrink-0 text-[#7a7a7a] text-[10px] w-[1280px]" data-node-id="39:6" data-name="Column Labels">
@@ -118,19 +119,19 @@ export default function Portfolio00Home() {
           </div>
           <div className="content-stretch flex flex-col gap-[12px] items-start overflow-clip pt-[21px] relative shrink-0 w-[560px]" data-node-id="39:17" data-name="Related Work">
             <div className="content-stretch flex flex-col gap-[8px] items-start overflow-clip relative shrink-0 w-[520px]" data-node-id="39:18" data-name="Project List">
-              <div className="[word-break:break-word] content-stretch flex items-start leading-[normal] overflow-clip relative shrink-0 w-[520px]" data-node-id="39:19" data-name="Project Line / AIGC Creative Practice">
+              <Link aria-label="打开 AIGC 创作实践" className="[word-break:break-word] content-stretch flex items-start leading-[normal] overflow-clip relative shrink-0 w-[520px]" data-node-id="39:19" data-name="Project Line / AIGC Creative Practice" style={{ color: 'inherit', textDecoration: 'none' }} to="/projects/aigc-creative-practice">
                 <p className="font-['Noto_Sans_SC:Medium'] font-medium relative shrink-0 text-[16px] text-white w-[420px]" data-node-id="39:20">
                   AIGC Creative Practice
                 </p>
                 <p className="font-['Noto_Sans_SC:Regular'] font-normal relative shrink-0 text-[#b8b8b8] text-[12px] text-right w-[100px]" data-node-id="39:21">
                   P.1 ↗
                 </p>
-              </div>
-              <div className="content-stretch flex items-start overflow-clip relative shrink-0 w-[520px]" data-node-id="39:22" data-name="Project Line / AIGC Content Account">
+              </Link>
+              <Link className="content-stretch flex items-start overflow-clip relative shrink-0 w-[520px]" data-node-id="39:22" data-name="Project Line / AIGC Content Account" style={{ color: 'inherit', textDecoration: 'none' }} to="/projects/aigc-creative-practice">
                 <p className="[word-break:break-word] font-['Noto_Sans_SC:Regular'] font-normal leading-[normal] relative shrink-0 text-[#b8b8b8] text-[14px] w-[420px]" data-node-id="39:23">
                   AIGC Content Account
                 </p>
-              </div>
+              </Link>
             </div>
             <div className="content-stretch flex flex-col gap-[8px] items-start overflow-clip relative shrink-0 w-[320px]" data-node-id="39:25" data-name="Preview / AIGC PRACTICE PREVIEW">
               <div className="border border-[rgba(122,122,122,0.9)] border-solid h-[150px] relative shrink-0 w-[320px]" data-node-id="39:26" data-name="AIGC PRACTICE PREVIEW Placeholder">
@@ -160,30 +161,30 @@ export default function Portfolio00Home() {
           </div>
           <div className="content-stretch flex flex-col gap-[12px] items-start overflow-clip pt-[21px] relative shrink-0 w-[560px]" data-node-id="39:35" data-name="Related Work">
             <div className="[word-break:break-word] content-stretch flex flex-col gap-[8px] items-start leading-[normal] overflow-clip relative shrink-0 w-[520px]" data-node-id="39:36" data-name="Project List">
-              <div className="content-stretch flex items-start overflow-clip relative shrink-0 w-[520px]" data-node-id="39:37" data-name="Project Line / Perfume Lab">
+              <Link className="content-stretch flex items-start overflow-clip relative shrink-0 w-[520px]" data-node-id="39:37" data-name="Project Line / Perfume Lab" style={{ color: 'inherit', textDecoration: 'none' }} to="/projects/perfume-lab">
                 <p className="font-['Noto_Sans_SC:Medium'] font-medium relative shrink-0 text-[16px] text-white w-[420px]" data-node-id="39:38">
                   香迹档案
                 </p>
                 <p className="font-['Noto_Sans_SC:Regular'] font-normal relative shrink-0 text-[#b8b8b8] text-[12px] text-right w-[100px]" data-node-id="39:39">
                   P.02 ↗
                 </p>
-              </div>
-              <div className="content-stretch flex font-['Noto_Sans_SC:Regular'] font-normal items-start overflow-clip relative shrink-0 text-[#b8b8b8] w-[520px]" data-node-id="39:40" data-name="Project Line / Idea Tree Skill">
+              </Link>
+              <Link className="content-stretch flex font-['Noto_Sans_SC:Regular'] font-normal items-start overflow-clip relative shrink-0 text-[#b8b8b8] w-[520px]" data-node-id="39:40" data-name="Project Line / Idea Tree Skill" style={{ color: 'inherit', textDecoration: 'none' }} to="/projects/idea-tree">
                 <p className="relative shrink-0 text-[14px] w-[420px]" data-node-id="39:41">
                   Idea Tree Skill
                 </p>
                 <p className="relative shrink-0 text-[12px] text-right w-[100px]" data-node-id="39:42">
                   P.04↗
                 </p>
-              </div>
-              <div className="content-stretch flex font-['Noto_Sans_SC:Regular'] font-normal items-start overflow-clip relative shrink-0 text-[#b8b8b8] w-[520px]" data-node-id="39:43" data-name="Project Line / Coze 气味可视化工作流">
+              </Link>
+              <Link className="content-stretch flex font-['Noto_Sans_SC:Regular'] font-normal items-start overflow-clip relative shrink-0 text-[#b8b8b8] w-[520px]" data-node-id="39:43" data-name="Project Line / Coze 气味可视化工作流" style={{ color: 'inherit', textDecoration: 'none' }} to="/projects/odor-land">
                 <p className="relative shrink-0 text-[14px] w-[420px]" data-node-id="39:44">
                   Coze 气味可视化工作流
                 </p>
                 <p className="relative shrink-0 text-[12px] text-right w-[100px]" data-node-id="39:45">
                   P.05 ↗
                 </p>
-              </div>
+              </Link>
             </div>
             <div className="content-stretch flex flex-col gap-[8px] items-start overflow-clip relative shrink-0 w-[320px]" data-node-id="39:46" data-name="Preview / PERFUME LAB PREVIEW">
               <div className="border border-[rgba(122,122,122,0.9)] border-solid h-[150px] relative shrink-0 w-[320px]" data-node-id="39:47" data-name="PERFUME LAB PREVIEW Placeholder">
@@ -215,38 +216,38 @@ export default function Portfolio00Home() {
           </div>
           <div className="content-stretch flex flex-col gap-[12px] items-start overflow-clip pt-[21px] relative shrink-0 w-[560px]" data-node-id="39:56" data-name="Related Work">
             <div className="[word-break:break-word] content-stretch flex flex-col gap-[8px] items-start leading-[normal] overflow-clip relative shrink-0 w-[520px]" data-node-id="39:57" data-name="Project List">
-              <div className="content-stretch flex items-start overflow-clip relative shrink-0 w-[520px]" data-node-id="39:58" data-name="Project Line / Pals Go">
+              <Link className="content-stretch flex items-start overflow-clip relative shrink-0 w-[520px]" data-node-id="39:58" data-name="Project Line / Pals Go" style={{ color: 'inherit', textDecoration: 'none' }} to="/projects/pals-go">
                 <p className="font-['Noto_Sans_SC:Medium'] font-medium relative shrink-0 text-[16px] text-white w-[420px]" data-node-id="39:59">
                   Pals Go
                 </p>
                 <p className="font-['Noto_Sans_SC:Regular'] font-normal relative shrink-0 text-[#b8b8b8] text-[12px] text-right w-[100px]" data-node-id="39:60">
                   P.03 ↗
                 </p>
-              </div>
-              <div className="content-stretch flex font-['Noto_Sans_SC:Regular'] font-normal items-start overflow-clip relative shrink-0 text-[#b8b8b8] w-[520px]" data-node-id="39:61" data-name="Project Line / Selected UX Work 01">
+              </Link>
+              <Link className="content-stretch flex font-['Noto_Sans_SC:Regular'] font-normal items-start overflow-clip relative shrink-0 text-[#b8b8b8] w-[520px]" data-node-id="39:61" data-name="Project Line / Selected UX Work 01" style={{ color: 'inherit', textDecoration: 'none' }} to="/projects/textual-scent-lab">
                 <p className="relative shrink-0 text-[14px] w-[420px]" data-node-id="39:62">
                   数据可视化网站
                 </p>
                 <p className="relative shrink-0 text-[12px] text-right w-[100px]" data-node-id="39:63">
                   P.06 ↗
                 </p>
-              </div>
-              <div className="content-stretch flex font-['Noto_Sans_SC:Regular'] font-normal items-start overflow-clip relative shrink-0 text-[#b8b8b8] w-[520px]" data-node-id="39:64" data-name="Project Line / Selected UX Work 02">
+              </Link>
+              <Link className="content-stretch flex font-['Noto_Sans_SC:Regular'] font-normal items-start overflow-clip relative shrink-0 text-[#b8b8b8] w-[520px]" data-node-id="39:64" data-name="Project Line / Selected UX Work 02" style={{ color: 'inherit', textDecoration: 'none' }} to="/projects/forest-wardrobe">
                 <p className="relative shrink-0 text-[14px] w-[420px]" data-node-id="39:65">
                   ESG导向的购物平台
                 </p>
                 <p className="relative shrink-0 text-[12px] text-right w-[100px]" data-node-id="39:66">
                   P.07 ↗
                 </p>
-              </div>
-              <div className="content-stretch flex font-['Noto_Sans_SC:Regular'] font-normal items-start overflow-clip relative shrink-0 text-[#b8b8b8] w-[520px]" data-node-id="39:67" data-name="Project Line / Selected UX Work 03">
+              </Link>
+              <Link className="content-stretch flex font-['Noto_Sans_SC:Regular'] font-normal items-start overflow-clip relative shrink-0 text-[#b8b8b8] w-[520px]" data-node-id="39:67" data-name="Project Line / Selected UX Work 03" style={{ color: 'inherit', textDecoration: 'none' }} to="/projects/stitch-revival">
                 <p className="relative shrink-0 text-[14px] w-[420px]" data-node-id="39:68">
                   AIGC非遗苗绣旧衣再生系统
                 </p>
                 <p className="relative shrink-0 text-[12px] text-right w-[100px]" data-node-id="39:69">
                   P.08↗
                 </p>
-              </div>
+              </Link>
             </div>
             <div className="content-stretch flex flex-col gap-[8px] items-start overflow-clip relative shrink-0 w-[320px]" data-node-id="39:70" data-name="Preview / PALS GO PREVIEW">
               <div className="border border-[rgba(122,122,122,0.9)] border-solid h-[150px] relative shrink-0 w-[320px]" data-node-id="39:71" data-name="PALS GO PREVIEW Placeholder">
@@ -276,14 +277,14 @@ export default function Portfolio00Home() {
           </div>
           <div className="content-stretch flex flex-col gap-[12px] items-start overflow-clip pt-[21px] relative shrink-0 w-[560px]" data-node-id="39:80" data-name="Related Work">
             <div className="content-stretch flex flex-col items-start overflow-clip relative shrink-0 w-[520px]" data-node-id="39:81" data-name="Project List">
-              <div className="[word-break:break-word] content-stretch flex items-start leading-[normal] overflow-clip relative shrink-0 w-[520px]" data-node-id="39:82" data-name="Project Line / Pals Go — Research">
+              <Link className="[word-break:break-word] content-stretch flex items-start leading-[normal] overflow-clip relative shrink-0 w-[520px]" data-node-id="39:82" data-name="Project Line / Pals Go — Research" style={{ color: 'inherit', textDecoration: 'none' }} to="/projects/pals-go#research">
                 <p className="font-['Noto_Sans_SC:Medium'] font-medium relative shrink-0 text-[16px] text-white w-[420px]" data-node-id="39:83">
                   Pals Go — Research
                 </p>
                 <p className="font-['Noto_Sans_SC:Regular'] font-normal relative shrink-0 text-[#b8b8b8] text-[12px] text-right w-[100px]" data-node-id="39:84">
                   P.03 part 2 ↗
                 </p>
-              </div>
+              </Link>
             </div>
             <div className="content-stretch flex flex-col gap-[8px] items-start overflow-clip relative shrink-0 w-[320px]" data-node-id="39:85" data-name="Preview / RESEARCH / DATA PREVIEW">
               <div className="border border-[rgba(122,122,122,0.9)] border-solid h-[150px] relative shrink-0 w-[320px]" data-node-id="39:86" data-name="RESEARCH / DATA PREVIEW Placeholder">
@@ -312,14 +313,14 @@ export default function Portfolio00Home() {
           </div>
           <div className="content-stretch flex flex-col gap-[12px] items-start overflow-clip pt-[21px] relative shrink-0 w-[560px]" data-node-id="39:95" data-name="Related Work">
             <div className="content-stretch flex flex-col items-start overflow-clip relative shrink-0 w-[520px]" data-node-id="39:96" data-name="Project List">
-              <div className="[word-break:break-word] content-stretch flex items-start leading-[normal] overflow-clip relative shrink-0 w-[520px]" data-node-id="39:97" data-name="Project Line / Pals Go — Operation">
+              <Link className="[word-break:break-word] content-stretch flex items-start leading-[normal] overflow-clip relative shrink-0 w-[520px]" data-node-id="39:97" data-name="Project Line / Pals Go — Operation" style={{ color: 'inherit', textDecoration: 'none' }} to="/projects/pals-go#operation">
                 <p className="font-['Noto_Sans_SC:Medium'] font-medium relative shrink-0 text-[16px] text-white w-[420px]" data-node-id="39:98">
                   Pals Go — Operation
                 </p>
                 <p className="font-['Noto_Sans_SC:Regular'] font-normal relative shrink-0 text-[#b8b8b8] text-[12px] text-right w-[100px]" data-node-id="39:99">
                   P.03 part 3 ↗
                 </p>
-              </div>
+              </Link>
             </div>
             <div className="content-stretch flex flex-col gap-[8px] items-start overflow-clip relative shrink-0 w-[320px]" data-node-id="39:103" data-name="Preview / CONTENT / COMMUNITY PREVIEW">
               <div className="border border-[rgba(122,122,122,0.9)] border-solid h-[150px] relative shrink-0 w-[320px]" data-node-id="39:104" data-name="CONTENT / COMMUNITY PREVIEW Placeholder">
@@ -349,24 +350,24 @@ export default function Portfolio00Home() {
           </div>
           <div className="content-stretch flex flex-col gap-[12px] items-start overflow-clip pt-[21px] relative shrink-0 w-[560px]" data-node-id="565:48108" data-name="Related Work">
             <div className="content-stretch flex flex-col items-start overflow-clip relative shrink-0 w-[520px]" data-node-id="565:48109" data-name="Project List">
-              <div className="[word-break:break-word] content-stretch flex items-start leading-[normal] overflow-clip relative shrink-0 w-[520px]" data-node-id="565:48110" data-name="Project Line / Pals Go — Operation">
+              <Link className="[word-break:break-word] content-stretch flex items-start leading-[normal] overflow-clip relative shrink-0 w-[520px]" data-node-id="565:48110" data-name="Project Line / Pals Go — Operation" style={{ color: 'inherit', textDecoration: 'none' }} to="/projects/art-exhibitions">
                 <p className="font-['Noto_Sans_SC:Medium'] font-medium relative shrink-0 text-[16px] text-white w-[420px]" data-node-id="565:48111">
                   Dream Cipher梦匣
                 </p>
                 <p className="font-['Noto_Sans_SC:Regular'] font-normal relative shrink-0 text-[#b8b8b8] text-[12px] text-right w-[100px]" data-node-id="565:48112">
                   P.9.↗
                 </p>
-              </div>
+              </Link>
             </div>
             <div className="content-stretch flex flex-col items-start overflow-clip relative shrink-0 w-[520px]" data-node-id="565:48139" data-name="Project List">
-              <div className="[word-break:break-word] content-stretch flex font-['Noto_Sans_SC:Regular'] font-normal items-start overflow-clip relative shrink-0 w-[520px]" data-node-id="565:48140" data-name="Project Line / Pals Go — Operation">
+              <Link className="[word-break:break-word] content-stretch flex font-['Noto_Sans_SC:Regular'] font-normal items-start overflow-clip relative shrink-0 w-[520px]" data-node-id="565:48140" data-name="Project Line / Pals Go — Operation" style={{ color: 'inherit', textDecoration: 'none' }} to="/projects/art-exhibitions">
                 <p className="leading-[100.40999603271484%] relative shrink-0 text-[#b5b5b5] text-[14px] w-[420px]" data-node-id="565:48141">
                   硅碳共生
                 </p>
                 <p className="leading-[normal] relative shrink-0 text-[#b8b8b8] text-[12px] text-right w-[100px]" data-node-id="565:48142">
                   P.9 ↗
                 </p>
-              </div>
+              </Link>
             </div>
             <div className="content-stretch flex flex-col gap-[8px] items-start overflow-clip relative shrink-0 w-[320px]" data-node-id="565:48113" data-name="Preview / CONTENT / COMMUNITY PREVIEW">
               <div className="border border-[rgba(122,122,122,0.9)] border-solid h-[150px] relative shrink-0 w-[320px]" data-node-id="565:48114" data-name="CONTENT / COMMUNITY PREVIEW Placeholder">
@@ -381,6 +382,7 @@ export default function Portfolio00Home() {
           </div>
         </div>
         <div className="bg-[#424242] h-px relative shrink-0 w-[1280px]" data-node-id="39:106" data-name="Divider" />
+        <p style={{ color: '#7a7a7a', fontFamily: 'Noto Sans SC, sans-serif', fontSize: 12, letterSpacing: 0.48, margin: '14px 0 0', position: 'relative' }}>下滑按顺序浏览 <span style={{ fontSize: 15, verticalAlign: 'sub' }}>↓</span></p>
       </div>
       <div className="bg-[#2e2e2e] h-px relative shrink-0 w-[1280px]" data-node-id="21:115" data-name="Divider" />
     </div>

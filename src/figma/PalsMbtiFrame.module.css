@@ -16,7 +16,7 @@
 .mechanismLabel,.qrLabel,.visualLabel { color:rgba(79,66,237,.85); font:500 9.75px/1.2 Arial,sans-serif; letter-spacing:.68px; position:absolute; }
 .mechanismLabel { left:54px; top:481.5px; }
 .mechanism { font-size:21px; font-weight:500; left:54px; line-height:1.35; position:absolute; top:508.5px; }
-.qr { background:repeating-conic-gradient(#1a1a1f 0 25%,#fff 0 50%) 0/12px 12px; border:8px solid #fff; height:96px; left:54px; position:absolute; top:652.8px; width:96px; }
+.qr { height:96px; left:54px; object-fit:contain; position:absolute; top:652.8px; width:96px; }
 .qrLabel { left:168px; top:625.5px; }
 .qrCaption { font-size:13.5px; font-weight:500; left:168px; position:absolute; top:652.5px; }
 .visualLabel { color:rgba(79,66,237,.72); left:927px; top:702.75px; }

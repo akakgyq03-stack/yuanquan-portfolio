@@ -18,7 +18,7 @@ export default function PalsMbtiFrame() {
       <i className={styles.divider} />
       <p className={styles.mechanismLabel}>SOCIAL ICEBREAKER</p>
       <p className={styles.mechanism}>人格标签 → 话题开启 → 现场互动</p>
-      <span aria-hidden="true" className={styles.qr} />
+      <img alt="羽毛球 MBTI 现场测试二维码" className={styles.qr} src="/assets/figma/library/pals-mbti-qr.png" />
       <p className={styles.qrLabel}>SCAN TO PLAY</p>
       <p className={styles.qrCaption}>现场测试入口</p>
       <p className={styles.visualLabel}>PERSONALITY SYSTEM / IP CHARACTERS</p>

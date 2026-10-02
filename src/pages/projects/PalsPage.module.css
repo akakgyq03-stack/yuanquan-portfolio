@@ -1,0 +1,50 @@
+.frames > section {
+  overflow: hidden;
+}
+
+.phoneIntro,
+.phoneIntro > div {
+  background: #fff !important;
+}
+
+.learningModel [data-node-id="488:727"],
+.learningModel [data-node-id="488:728"] {
+  display: none;
+}
+
+.modelLabels {
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+}
+
+.modelLabels span {
+  align-items: center;
+  background: #cfff43;
+  border: 1px solid rgba(18, 30, 13, .45);
+  border-radius: 6px;
+  color: rgba(0, 0, 0, .8);
+  display: flex;
+  font-family: "Noto Sans SC", sans-serif;
+  font-size: 30px;
+  height: 56px;
+  justify-content: center;
+  line-height: 1;
+  position: absolute;
+}
+
+.selfAbility { left: 446px; top: 166px; width: 130px; }
+.feedback { left: 446px; top: 337px; width: 130px; }
+.willingness { left: 769px; top: 166px; width: 159px; }
+.effect { left: 955px; top: 390px; width: 167px; }
+.experience { left: 729px; top: 645px; width: 170px; }
+
+.modelLabels i {
+  color: #8173ff;
+  font: 400 30px/1 Arial, sans-serif;
+  position: absolute;
+}
+
+.h11 { left: 637px; top: 505px; }
+.h12 { left: 634px; top: 580px; }
+.h13 { left: 643px; top: 666px; }

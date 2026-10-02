@@ -1,0 +1,56 @@
+.frames > section { overflow: hidden; }
+
+.operations {
+  color: #0c1f27;
+  font-family: "Noto Sans SC", sans-serif;
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+}
+
+.operationCards {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(5, 218px);
+  left: 112px;
+  position: absolute;
+  top: 375px;
+}
+
+.operationCards article {
+  background: #e7f6f5;
+  border: 1px solid #c2d9d6;
+  border-radius: 18px;
+  box-sizing: border-box;
+  height: 202px;
+  padding: 20px;
+}
+
+.operationCards .activeCard { background: #0c1f27; color: #fff; }
+.operationCards b { color: #13bbc1; font: 700 34px/1 Arial, sans-serif; }
+.operationCards h3 { font-size: 22px; margin: 22px 0 18px; }
+.operationCards p { color: #577378; font-size: 15px; line-height: 1.45; margin: 0; }
+.operationCards .activeCard p { color: #7ad6d5; }
+
+.nextMoves {
+  background: #0c1f27;
+  border-radius: 20px;
+  box-sizing: border-box;
+  height: 257px;
+  left: 112px;
+  position: absolute;
+  top: 620px;
+  width: 1216px;
+}
+
+.panelKicker { color: #7ad6d5; font-size: 12px; left: 26px; letter-spacing: 1.4px; position: absolute; top: 15px; }
+.selectedNode { background: #e7f6f5; border: 2px solid #13bbc1; border-radius: 14px; box-sizing: border-box; height: 145px; left: 28px; padding: 14px; position: absolute; top: 76px; width: 244px; }
+.selectedNode b { color: #13bbc1; font-size: 20px; }
+.selectedNode h3 { font-size: 17px; margin: 10px 0 8px; }
+.selectedNode p { color: #66736c; font-size: 12px; margin: 0; }
+.selectedNode small { bottom: 14px; color: #13bbc1; font-size: 10px; left: 14px; position: absolute; }
+
+.actions { display: grid; gap: 20px 30px; grid-template-columns: repeat(3, 237px); left: 328px; position: absolute; top: 73px; }
+.actions span { align-items: center; background: #13333d; border-radius: 12px; color: #fff; display: flex; font-size: 13px; height: 57px; justify-content: center; }
+.actions .activeAction { background: #18b9c1; color: #0c1f27; }
+.actions p { color: #7ad6d5; font-size: 11px; grid-column: 1 / -1; margin: -8px 0 0; }
