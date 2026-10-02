@@ -9,6 +9,7 @@ export default defineConfig({
   outputDir: '.impeccable/test-results',
   fullyParallel: false,
   workers: 2,
+  timeout: 120_000,
   reporter: [['list']],
   use: {
     baseURL: liveBaseURL ?? localBaseURL,

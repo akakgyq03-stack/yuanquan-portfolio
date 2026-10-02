@@ -37,7 +37,7 @@
 - ESLint: passed.
 - TypeScript: passed.
 - Vite production build: passed.
-- Playwright: 34/34 passed across desktop and mobile projects.
+- Playwright: 34/34 passed locally across desktop and mobile projects; the same production checks passed against Cloudflare Pages.
 - Verified every route, direct/deep navigation, refresh/back, directory anchors, previous/next controls, 404, local images, reduced motion, and no document-level horizontal overflow.
 - Verified no implementation source contains temporary Figma asset URLs.
 
