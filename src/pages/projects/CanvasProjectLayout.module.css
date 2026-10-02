@@ -1,0 +1,6 @@
+.page { min-height: 100vh; overflow: clip; position: relative; }
+.dark { background: #000; color: #fff; }
+.light { background: #f5f3ea; color: #171713; }
+.start { left: 0; position: absolute; top: 0; }
+.anchors { inset: 0; pointer-events: none; position: absolute; }
+.anchors span { left: 0; position: absolute; scroll-margin-top: 70px; }

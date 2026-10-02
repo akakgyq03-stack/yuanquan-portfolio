@@ -1,0 +1,41 @@
+.phone { position:absolute; }
+.phone > :first-child { position:absolute; inset:0; }
+.phoneContent { color:#1d1d1d; font-family:"Noto Sans SC",sans-serif; height:100%; inset:0; position:absolute; width:100%; }
+.phoneTitle { font-size:16px; left:50%; position:absolute; top:64px; transform:translateX(-50%); z-index:3; }
+.back { color:rgba(29,29,29,.5); font-size:10px; left:25px; position:absolute; top:70px; z-index:3; }
+.phoneBody { left:27px; position:absolute; top:137px; width:348px; z-index:2; }
+.uploadBlock { margin-bottom:14px; }
+.uploadBlock > p { font-size:16px; height:29px; line-height:24px; }
+.uploadBox { align-items:center; border:1px dashed #b8b8b8; display:flex; flex-direction:column; height:142px; justify-content:center; width:348px; }
+.uploadIcon { font:700 42px/35px Arial,sans-serif; }
+.uploadBox b { font-size:17px; font-weight:500; }
+.uploadBox small { color:#c6c6c6; font-size:9px; margin-top:3px; }
+.slider { font-size:14px; margin-top:14px; width:343px; }
+.slider > div { align-items:center; display:flex; justify-content:space-between; }
+.slider output { background:#eee; border-radius:3px; color:#777; font-size:13px; padding:2px 7px; }
+.slider > i { background:#d9d9d9; display:block; height:6px; margin-top:9px; position:relative; width:100%; }
+.slider > i > b { background:#0005a1; display:block; height:6px; position:relative; }
+.slider em { background:#1d1d1d; border:2px solid white; border-radius:50%; height:14px; position:absolute; top:-4px; transform:translateX(-50%); width:14px; }
+.slider small { color:#aaa; display:flex; font-size:10px; justify-content:space-between; margin-top:8px; }
+.phoneContent button { background:#0005a1; border:0; border-radius:4px; color:white; font:400 20px "Noto Sans SC",sans-serif; height:62px; width:336px; }
+.phoneBody button { margin:26px 6px 0; }
+.bezel { height:920px; left:-24px; max-width:none; object-fit:cover; pointer-events:none; position:absolute; top:-23px; width:450px; z-index:4; }
+.result { height:392px; left:29px; position:absolute; top:111px; width:348px; z-index:2; }
+.controls { left:34px; position:absolute; top:510px; width:343px; z-index:2; }
+.controls .slider { margin-top:10px; }
+.controls button { margin-top:13px; }
+.businessCanvas { left:2241px; position:absolute; top:200px; }
+.businessCanvas article { border:2px solid #2860b5; box-sizing:border-box; padding:17px 17px; position:absolute; width:214px; }
+.businessCanvas h3 { color:#2860b5; font:500 16px/1.2 Arial,sans-serif; white-space:nowrap; }
+.businessCanvas h4 { color:#2860b5; font-size:15px; font-weight:500; margin:8px 0 0; }
+.businessCanvas p { font-size:14px; line-height:1.68; margin-top:35px; white-space:pre-line; }
+.partner { height:467px; left:0; top:0; }
+.activity { height:224px; left:232px; top:0; }
+.resource { height:222px; left:232px; top:245px; }
+.value { height:467px; left:464px; top:0; }
+.relation { height:278px; left:697px; top:0; }
+.channel { height:180px; left:697px; top:287px; }
+.segment { height:467px; left:929px; top:0; }
+.cost { height:205px; left:0; top:487px; width:562px !important; }
+.revenue { height:205px; left:581px; top:487px; width:562px !important; }
+.cost p,.revenue p { columns:2; margin-top:22px; }

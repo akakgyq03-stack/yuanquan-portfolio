@@ -7,7 +7,8 @@ const localBaseURL = 'http://127.0.0.1:4173'
 export default defineConfig({
   testDir: './tests',
   outputDir: '.impeccable/test-results',
-  fullyParallel: true,
+  fullyParallel: false,
+  workers: 2,
   reporter: [['list']],
   use: {
     baseURL: liveBaseURL ?? localBaseURL,

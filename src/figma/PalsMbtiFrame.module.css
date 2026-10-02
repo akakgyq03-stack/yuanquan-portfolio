@@ -1,0 +1,22 @@
+.frame { background:#f5f5f5; color:#1a1a1f; height:864px; overflow:hidden; position:relative; width:1440px; }
+.progress { align-items:center; background:#fff; color:#9a9aa4; display:flex; font-size:12px; gap:48px; height:54px; justify-content:flex-end; padding-right:56px; }
+.progress b { border-bottom:3px solid #8173ff; color:#1a1a1f; height:44px; padding-top:14px; }
+.field { background:#eeecff; border-radius:24px; height:729px; left:480px; position:absolute; top:94.5px; width:911.25px; }
+.hero,.characters,.characterCrop { box-shadow:0 10.5px 22.5px rgba(36,28,71,.13); position:absolute; }
+.hero { border-radius:19.5px; height:521.25px; left:510px; object-fit:cover; top:181.5px; width:390px; }
+.characters { border-radius:16.5px; height:330px; left:926.25px; object-fit:cover; top:142.5px; width:247.5px; }
+.characterCrop { border-radius:16.5px; height:290.25px; left:1125px; overflow:hidden; top:361.5px; width:240px; }
+.characterCrop img { height:100%; left:-21.28%; max-width:none; position:absolute; width:144.8%; }
+.rule { background:#8173ff; height:6px; left:54px; position:absolute; top:138px; width:84px; }
+.kicker { color:rgba(79,66,237,.9); font:500 12.75px/1.2 Arial,sans-serif; left:54px; letter-spacing:.8925px; position:absolute; top:103.5px; }
+.frame h2 { font-size:57px; line-height:1.04; left:54px; position:absolute; top:162px; }
+.frame h3 { font-size:27px; font-weight:500; left:54px; line-height:1.32; position:absolute; top:258px; }
+.body { color:rgba(84,84,99,.9); font-size:15px; left:54px; line-height:1.6; position:absolute; top:369px; }
+.divider { background:#aaaab2; height:.75px; left:54px; position:absolute; top:456px; width:375px; }
+.mechanismLabel,.qrLabel,.visualLabel { color:rgba(79,66,237,.85); font:500 9.75px/1.2 Arial,sans-serif; letter-spacing:.68px; position:absolute; }
+.mechanismLabel { left:54px; top:481.5px; }
+.mechanism { font-size:21px; font-weight:500; left:54px; line-height:1.35; position:absolute; top:508.5px; }
+.qr { background:repeating-conic-gradient(#1a1a1f 0 25%,#fff 0 50%) 0/12px 12px; border:8px solid #fff; height:96px; left:54px; position:absolute; top:652.8px; width:96px; }
+.qrLabel { left:168px; top:625.5px; }
+.qrCaption { font-size:13.5px; font-weight:500; left:168px; position:absolute; top:652.5px; }
+.visualLabel { color:rgba(79,66,237,.72); left:927px; top:702.75px; }

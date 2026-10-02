@@ -4,4 +4,5 @@ dist/
 .impeccable/review/
 playwright-report/
 test-results/
+.design-reference/
 *.log

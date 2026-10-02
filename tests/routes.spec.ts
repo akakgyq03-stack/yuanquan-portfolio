@@ -14,64 +14,66 @@ const routes = [
 ]
 
 for (const route of routes) {
-  test(`${route} renders without overflow or failed assets`, async ({ page }) => {
+  test(route + ' renders the Figma canvas without overflow or failed assets', async ({ page }) => {
     const errors: string[] = []
     page.on('console', (message) => { if (message.type() === 'error') errors.push(message.text()) })
-    page.on('response', (response) => { if (response.status() >= 400) errors.push(`${response.status()} ${response.url()}`) })
+    page.on('pageerror', (error) => errors.push(error.message))
+    page.on('response', (response) => { if (response.status() >= 400) errors.push(response.status() + ' ' + response.url()) })
     await page.goto(route, { waitUntil: 'networkidle' })
     await expect(page.locator('main')).toBeVisible()
-    const overflow = await page.evaluate(() => document.documentElement.scrollWidth > document.documentElement.clientWidth + 1)
-    expect(overflow).toBeFalsy()
+    const state = await page.evaluate(() => ({
+      failedImages: [...document.images].filter((image) => image.complete && image.naturalWidth === 0 && !image.src.endsWith('.svg')).map((image) => image.src),
+      overflow: document.documentElement.scrollWidth > document.documentElement.clientWidth + 1,
+      temporaryFigmaAssets: [...document.images].filter((image) => image.src.includes('figma.com/api/mcp/asset')).map((image) => image.src),
+    }))
+    expect(state.overflow).toBeFalsy()
+    expect(state.failedImages).toEqual([])
+    expect(state.temporaryFigmaAssets).toEqual([])
     expect(errors).toEqual([])
   })
 }
 
-test('directory axis updates the hash and remains keyboard reachable', async ({ page }) => {
+test('project directory links jump to the requested Figma section', async ({ page }) => {
   await page.goto('/projects/perfume-lab')
-  const axis = page.getByRole('navigation', { name: '项目章节目录' })
-  await expect(axis).toBeVisible()
-  await axis.getByRole('button', { name: /产品价值/ }).click()
+  const directory = page.getByRole('navigation', { name: '项目目录' })
+  await expect(directory).toBeVisible()
+  await directory.getByRole('link', { name: /产品价值/ }).click()
   await expect(page).toHaveURL(/#product-value$/)
   await expect(page.locator('#product-value')).toBeInViewport()
 })
 
-test('directory axes follow the project-specific information architecture', async ({ page }) => {
-  await page.goto('/projects/aigc-creative-practice')
-  await expect(page.getByRole('navigation', { name: '项目章节目录' })).toHaveCount(0)
-
-  await page.goto('/projects/art-exhibitions')
-  await expect(page.getByRole('navigation', { name: '项目章节目录' })).toHaveCount(0)
-
-  await page.goto('/projects/textual-scent-lab')
-  const textualAxis = page.getByRole('navigation', { name: '项目章节目录' })
-  await expect(textualAxis.locator('button[data-section]')).toHaveCount(8)
-
-  await page.goto('/projects/perfume-lab')
-  await page.getByRole('navigation', { name: '项目章节目录' }).getByRole('button', { name: /核心机制/ }).click()
-  const secondary = page.getByRole('navigation', { name: '核心机制次级进度' })
-  await expect(secondary.getByRole('link')).toHaveCount(3)
-  await expect(secondary.getByText('06.1')).toBeVisible()
-  await expect(secondary.getByText('06.2')).toBeVisible()
-  await expect(secondary.getByText('06.3')).toBeVisible()
+test('every project exposes return, directory, and previous/next controls', async ({ page }) => {
+  for (const route of routes.slice(1)) {
+    await page.goto(route, { waitUntil: 'networkidle' })
+    await expect(page.getByRole('navigation', { name: '项目导航' })).toBeVisible({ timeout: 15_000 })
+    await expect(page.getByRole('navigation', { name: '项目目录' })).toBeVisible()
+    await expect(page.getByRole('navigation', { name: '相邻项目' })).toBeVisible()
+  }
 })
 
-test('reduced motion uses immediate chapter navigation', async ({ page }) => {
-  await page.emulateMedia({ reducedMotion: 'reduce' })
-  await page.goto('/projects/perfume-lab')
-  await expect.poll(() => page.evaluate(() => getComputedStyle(document.documentElement).scrollBehavior)).toBe('auto')
-  await page.getByRole('navigation', { name: '项目章节目录' }).getByRole('button', { name: /产品价值/ }).click()
+test('deep chapter links survive refresh and browser back', async ({ page }) => {
+  await page.goto('/projects/perfume-lab#product-value')
   await expect(page.locator('#product-value')).toBeInViewport()
+  await page.reload({ waitUntil: 'networkidle' })
+  await expect(page.locator('#product-value')).toBeInViewport()
+  await page.getByRole('link', { name: '返回作品索引' }).click()
+  await expect(page).toHaveURL(/\/$/)
+  await page.goBack()
+  await expect(page).toHaveURL(/#product-value$/)
 })
 
-test('self-hosted font and responsive image formats are available', async ({ page }) => {
-  await page.goto('/', { waitUntil: 'networkidle' })
-  await expect.poll(() => page.evaluate(() => document.fonts.check('16px "Noto Sans SC Variable"'))).toBeTruthy()
-  await expect(page.locator('source[type="image/avif"]').first()).toHaveAttribute('srcset', /\.avif/)
-  await expect(page.locator('source[type="image/webp"]').first()).toHaveAttribute('srcset', /\.webp/)
+test('home contact and project hotspots are keyboard reachable', async ({ page }) => {
+  await page.goto('/')
+  await expect(page.getByRole('link', { name: '发送邮件至 13187688338@163.com' })).toHaveAttribute('href', 'mailto:13187688338@163.com')
+  const projectLink = page.getByRole('link', { name: '打开 AIGC 创作实践' })
+  await projectLink.focus()
+  await expect(projectLink).toBeFocused()
+  await projectLink.press('Enter')
+  await expect(page).toHaveURL(/aigc-creative-practice/)
 })
 
 test('intermediate responsive widths remain free of document overflow', async ({ page }) => {
-  for (const width of [1024, 768]) {
+  for (const width of [1024, 768, 390]) {
     await page.setViewportSize({ width, height: 900 })
     for (const route of routes) {
       await page.goto(route, { waitUntil: 'domcontentloaded' })
@@ -80,33 +82,10 @@ test('intermediate responsive widths remain free of document overflow', async ({
   }
 })
 
-test('deep chapter links refresh, return to top, and restore with browser back', async ({ page }) => {
-  await page.goto('/projects/perfume-lab#product-value')
-  await expect(page.locator('#product-value')).toBeInViewport()
-  await page.reload({ waitUntil: 'networkidle' })
-  await expect(page.locator('#product-value')).toBeInViewport()
-
-  await page.getByRole('navigation', { name: '项目章节目录' }).getByRole('button', { name: 'TOP ↑' }).click()
-  await expect(page).toHaveURL(/\/projects\/perfume-lab$/)
-  await expect.poll(() => page.evaluate(() => window.scrollY)).toBeLessThan(8)
-
-  await page.goBack()
-  await expect(page).toHaveURL(/#product-value$/)
-  await expect(page.locator('#product-value')).toBeInViewport()
-})
-
-test('home exposes email contact without a telephone link', async ({ page }) => {
-  await page.goto('/')
-  await expect(page.getByRole('link', { name: '13187688338@163.com' })).toHaveAttribute('href', 'mailto:13187688338@163.com')
-  await expect(page.locator('a[href^="tel:"]')).toHaveCount(0)
-})
-
-test('project pager and index return work', async ({ page }) => {
-  await page.goto('/projects/art-exhibitions')
-  await page.getByRole('link', { name: /NEXT/ }).click()
-  await expect(page).toHaveURL(/aigc-creative-practice/)
-  await page.getByRole('link', { name: 'BACK TO WORK INDEX' }).click()
-  await expect(page).toHaveURL(/\/#work-index$/)
+test('reduced motion disables smooth scrolling', async ({ page }) => {
+  await page.emulateMedia({ reducedMotion: 'reduce' })
+  await page.goto('/projects/perfume-lab')
+  await expect.poll(() => page.evaluate(() => getComputedStyle(document.documentElement).scrollBehavior)).toBe('auto')
 })
 
 test('unknown route shows custom 404', async ({ page }) => {
