@@ -828,6 +828,24 @@ export const assetsByNode: Record<string, FigmaAsset[]> = {
       "sourceNode": "487:408"
     },
     {
+      "name": "img3",
+      "src": "/assets/figma/library/00d9cbca0530315b1231.svg",
+      "kind": "svg",
+      "sourceNode": "487:408"
+    },
+    {
+      "name": "img4",
+      "src": "/assets/figma/library/00d9cbca0530315b1231.svg",
+      "kind": "svg",
+      "sourceNode": "487:408"
+    },
+    {
+      "name": "img6",
+      "src": "/assets/figma/library/00d9cbca0530315b1231.svg",
+      "kind": "svg",
+      "sourceNode": "487:408"
+    },
+    {
       "name": "img8",
       "src": "/assets/figma/library/5987465339b315a1785d.svg",
       "kind": "svg",
@@ -842,6 +860,12 @@ export const assetsByNode: Record<string, FigmaAsset[]> = {
     {
       "name": "img10",
       "src": "/assets/figma/library/99097965acdef6fd5c86.svg",
+      "kind": "svg",
+      "sourceNode": "487:408"
+    },
+    {
+      "name": "img11",
+      "src": "/assets/figma/library/00d9cbca0530315b1231.svg",
       "kind": "svg",
       "sourceNode": "487:408"
     },

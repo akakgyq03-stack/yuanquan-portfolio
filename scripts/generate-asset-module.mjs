@@ -19,7 +19,7 @@ async function dimensions(publicPath) {
 for (const asset of manifest.assets) {
   const key = asset.nodeId
   const list = grouped.get(key) ?? []
-  if (!list.some((item) => item.src === asset.publicPath)) {
+  if (!list.some((item) => item.name === asset.name)) {
     list.push({
       name: asset.name,
       src: asset.publicPath,

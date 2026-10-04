@@ -77,6 +77,16 @@ test('Odor Land and Textual Scent Lab render their restored visual assets', asyn
   await expect(architectureMap.locator('rect')).toHaveCount(24)
 })
 
+test('Textual Scent Lab keeps the complete Figma technology framework', async ({ page }) => {
+  await page.goto('/projects/textual-scent-lab#technology', { waitUntil: 'networkidle' })
+  const framework = page.getByRole('img', { name: '技术框架流程图' })
+  await expect(framework).toBeVisible()
+  await expect(framework.locator('[data-node-id^="537:15"], [data-node-id^="537:160"]')).toHaveCount(34)
+  await expect(framework.getByText('数据爬取')).toBeVisible()
+  await expect(framework.getByText('随机森林训练')).toBeVisible()
+  await expect(framework.getByText('基于 TD 的气味感官可视化')).toBeVisible()
+})
+
 test('every project exposes return and previous/next controls, with directories only where designed', async ({ page }) => {
   for (const route of routes.slice(1)) {
     await page.goto(route, { waitUntil: 'networkidle' })

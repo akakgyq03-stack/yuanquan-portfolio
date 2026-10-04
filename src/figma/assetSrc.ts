@@ -30,6 +30,8 @@ const manualAssets: Record<string, string> = {
 }
 
 export function assetSrc(nodeId: string, name: string) {
+  const manualAsset = manualAssets[`${nodeId}/${name}`]
+  if (manualAsset) return manualAsset
   const asset = assetsByNode[nodeId]?.find((candidate) => candidate.name === name)
-  return asset?.avifSrc ?? asset?.src ?? manualAssets[`${nodeId}/${name}`] ?? ''
+  return asset?.avifSrc ?? asset?.src ?? ''
 }
