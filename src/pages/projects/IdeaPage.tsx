@@ -18,14 +18,12 @@ import { CanvasProjectLayout } from './CanvasProjectLayout'
 import styles from './IdeaPage.module.css'
 
 const directory = [
-  { id: 'overview', label: '项目概览' }, { id: 'problem', label: '问题定义' },
-  { id: 'hypothesis', label: '优化假设' }, { id: 'tension', label: '设计矛盾' },
-  { id: 'validation-plan', label: '验证方案' }, { id: 'validation-method', label: '验证方式' },
-  { id: 'findings', label: '关键发现' }, { id: 'definition', label: '产品定义' },
-  { id: 'experience-shift', label: '用户体验转变' }, { id: 'solution', label: '产品方案' },
-  { id: 'context', label: 'Context 理解' }, { id: 'constraints', label: '明确约束' },
-  { id: 'node-operations', label: '节点操作' }, { id: 'frontend', label: '前端可视化' },
-  { id: 'delivery', label: '最终交付' },
+  { id: 'overview', label: '项目概览' },
+  { id: 'problem', label: '问题与假设' },
+  { id: 'validation-plan', label: '验证与洞察' },
+  { id: 'definition', label: '产品定义' },
+  { id: 'solution', label: '核心机制' },
+  { id: 'frontend', label: '原型与结果' },
 ]
 
 export default function IdeaPage() {

@@ -9,12 +9,12 @@ export default function Web144047() {
       <div className="absolute bg-[rgba(255,255,255,0.98)] border border-[rgba(20,20,28,0.1)] border-solid h-[54px] left-0 top-0 w-[1440px]" data-node-id="308:386" data-name="PALS GO / Progress / Band" />
       <div className="absolute contents left-[-206.25px] mix-blend-multiply top-[120.75px]" data-node-id="290:375">
         <div className="absolute contents left-[-206.25px] mix-blend-multiply top-[120.75px]" data-node-id="290:376">
-          <div className="absolute h-[816.75px] left-[-206.25px] top-[120.75px] w-[1230.251px]" data-node-id="290:377" data-name="image 401">
+          <div className="absolute h-[816.75px] left-[-206.25px] mix-blend-multiply top-[120.75px] w-[1230.251px]" data-node-id="290:377" data-name="image 401">
             <img alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgImage401} />
           </div>
-          <div className="absolute bg-white h-[54px] left-[353.25px] top-[853.5px] w-[540px]" data-node-id="290:378" />
+          <div className="absolute bg-[#f5f5f5] h-[54px] left-[353.25px] top-[853.5px] w-[540px]" data-node-id="290:378" />
         </div>
-        <div className="-translate-x-1/2 absolute h-[549px] left-[calc(50%-310.88px)] mix-blend-multiply top-[216.75px] w-[260.019px]" data-node-id="290:379" data-name="image 270">
+        <div className="-translate-x-1/2 absolute h-[549px] left-[calc(50%-310.88px)] top-[216.75px] w-[260.019px]" data-node-id="290:379" data-name="image 270">
           <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImage270} />
         </div>
       </div>

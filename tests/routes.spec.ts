@@ -42,6 +42,27 @@ test('project directory links jump to the requested Figma section', async ({ pag
   await expect(page.locator('#product-value')).toBeInViewport()
 })
 
+test('Pals Go and Idea Tree directories mirror their in-page chapter axes', async ({ page }) => {
+  await page.goto('/projects/pals-go')
+  const palsSections = page.locator('[aria-label="Pals Go"] section')
+  const gaps = await palsSections.evaluateAll((sections) => sections.slice(1).map((section, index) => {
+    const previous = sections[index] as HTMLElement
+    return (section as HTMLElement).offsetTop - previous.offsetTop - previous.offsetHeight
+  }))
+  expect(gaps.every((gap) => gap === 0)).toBeTruthy()
+  await expect(page.locator('[data-node-id="290:377"]')).toHaveCSS('mix-blend-mode', 'multiply')
+  await expect(page.locator('[data-node-id="290:379"]')).toHaveCSS('mix-blend-mode', 'normal')
+  const palsDirectory = page.getByRole('navigation', { name: '项目目录' })
+  await expect(palsDirectory.getByRole('link')).toHaveText(['01用户洞察', '02核心功能', '03用户研究', '04运营验证'])
+  await page.getByRole('link', { name: '跳转到用户研究章节' }).click()
+  await expect(page).toHaveURL(/#user-research$/)
+  await expect(page.locator('#user-research')).toBeInViewport()
+
+  await page.goto('/projects/idea-tree')
+  const ideaDirectory = page.getByRole('navigation', { name: '项目目录' })
+  await expect(ideaDirectory.getByRole('link')).toHaveText(['01项目概览', '02问题与假设', '03验证与洞察', '04产品定义', '05核心机制', '06原型与结果'])
+})
+
 test('every project exposes return and previous/next controls, with directories only where designed', async ({ page }) => {
   for (const route of routes.slice(1)) {
     await page.goto(route, { waitUntil: 'networkidle' })
