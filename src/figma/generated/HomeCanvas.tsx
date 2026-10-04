@@ -79,14 +79,14 @@ export default function Portfolio00Home() {
         <p className="[word-break:break-word] font-['Noto_Sans_SC:Medium'] font-medium h-px leading-[normal] relative shrink-0 text-[12px] text-[rgba(255,255,255,0.62)] tracking-[0.48px] w-[227px] whitespace-pre-wrap" data-node-id="30:5">{`↓  Scroll to Capability Map / 能力矩阵`}</p>
       </div>
       <div className="content-stretch flex flex-col h-[1687px] items-start relative shrink-0 w-[1280px]" data-node-id="21:31" data-name="Section/02 Capability Map + Work Index">
-        <div className="[word-break:break-word] content-stretch flex flex-col gap-[10px] h-[95px] items-start leading-[normal] overflow-clip pb-[28px] relative shrink-0" data-node-id="39:2" data-name="Header">
+        <div className="[word-break:break-word] content-stretch flex flex-col gap-[10px] h-[95px] items-start leading-[normal] overflow-visible pb-[28px] relative shrink-0" data-node-id="39:2" data-name="Header">
           <p className="font-['Noto_Sans_SC:Regular'] font-normal relative shrink-0 text-[#b8b8b8] text-[12px] w-[1280px]" data-node-id="39:3">
             02 / CAPABILITY MAP · WORK INDEX
           </p>
           <p className="font-['Noto_Sans_SC:Bold'] font-bold relative shrink-0 text-[34px] text-white w-[1280px]" data-node-id="39:4">
             作品索引
           </p>
-          <p className="absolute bottom-[28px] font-['Noto_Sans_SC:Regular'] font-normal right-0 text-[#b8b8b8] text-[15px] text-right w-[420px]" data-node-id="39:5">
+          <p className="absolute font-['Noto_Sans_SC:Regular'] font-normal right-0 text-[#b8b8b8] text-[15px] text-right w-[420px]" data-node-id="39:5" style={{ bottom: 0 }}>
             点击项目名称和目录跳转查看。
           </p>
         </div>
@@ -382,7 +382,7 @@ export default function Portfolio00Home() {
           </div>
         </div>
         <div className="bg-[#424242] h-px relative shrink-0 w-[1280px]" data-node-id="39:106" data-name="Divider" />
-        <p style={{ color: '#7a7a7a', fontFamily: 'Noto Sans SC, sans-serif', fontSize: 12, letterSpacing: 0.48, margin: '14px 0 0', position: 'relative' }}>下滑按顺序浏览 <span style={{ fontSize: 15, verticalAlign: 'sub' }}>↓</span></p>
+        <Link aria-label="按顺序进入 AIGC 创作实践" style={{ color: '#b8b8b8', display: 'block', fontFamily: 'Noto Sans SC, sans-serif', fontSize: 20, letterSpacing: 0.6, margin: '16px 0 0', position: 'relative', textAlign: 'right', textDecoration: 'none', width: 1280 }} to="/projects/aigc-creative-practice">下滑按顺序浏览 <span aria-hidden="true" style={{ fontSize: 23, verticalAlign: 'sub' }}>↓</span></Link>
       </div>
       <div className="bg-[#2e2e2e] h-px relative shrink-0 w-[1280px]" data-node-id="21:115" data-name="Divider" />
     </div>

@@ -42,13 +42,28 @@ test('project directory links jump to the requested Figma section', async ({ pag
   await expect(page.locator('#product-value')).toBeInViewport()
 })
 
-test('every project exposes return, directory, and previous/next controls', async ({ page }) => {
+test('every project exposes return and previous/next controls, with directories only where designed', async ({ page }) => {
   for (const route of routes.slice(1)) {
     await page.goto(route, { waitUntil: 'networkidle' })
     await expect(page.getByRole('navigation', { name: '项目导航' })).toBeVisible({ timeout: 15_000 })
-    await expect(page.getByRole('navigation', { name: '项目目录' })).toBeVisible()
+    const directory = page.getByRole('navigation', { name: '项目目录' })
+    if (route.endsWith('aigc-creative-practice') || route.endsWith('art-exhibitions')) {
+      await expect(directory).toHaveCount(0)
+    } else {
+      await expect(directory).toBeVisible()
+    }
     await expect(page.getByRole('navigation', { name: '相邻项目' })).toBeVisible()
   }
+})
+
+test('home sequential link opens AIGC before the AI product overview', async ({ page }) => {
+  await page.goto('/')
+  await page.getByRole('link', { name: '按顺序进入 AIGC 创作实践' }).click()
+  await expect(page).toHaveURL(/aigc-creative-practice/)
+  const canvases = page.locator('[aria-label="AIGC 创作实践"], [aria-label="AI 产品项目总览"]')
+  await expect(canvases).toHaveCount(2)
+  await expect(canvases.nth(0)).toHaveAttribute('aria-label', 'AIGC 创作实践')
+  await expect(canvases.nth(1)).toHaveAttribute('aria-label', 'AI 产品项目总览')
 })
 
 test('deep chapter links survive refresh and browser back', async ({ page }) => {

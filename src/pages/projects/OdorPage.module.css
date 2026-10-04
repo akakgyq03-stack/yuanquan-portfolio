@@ -1,0 +1,8 @@
+.canvas {
+  height: 100%;
+  width: 100%;
+}
+
+.canvas [data-name="目录导航 / 点击区域"] {
+  display: none;
+}

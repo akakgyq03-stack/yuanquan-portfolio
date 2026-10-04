@@ -31,21 +31,21 @@ const directory = [
 export default function IdeaPage() {
   return (
     <CanvasProjectLayout directory={directory} projectId="idea-tree" tone="light">
-      <ResponsiveArtboard height={15168.5} label="Idea Tree Skill" width={1640}>
-        <div className={styles.frames} style={{ background: '#050505', height: 15168.5, position: 'relative', width: 1640 }}>
-        <section id="overview" style={{ height: 898, left: 100, position: 'absolute', top: 100, width: 1440 }}><Frame0 /></section>
-        <section id="problem" style={{ height: 898, left: 100, position: 'absolute', top: 1046, width: 1440 }}><Frame1 /></section>
-        <section id="hypothesis" style={{ height: 898, left: 100, position: 'absolute', top: 1992, width: 1440 }}><Frame2 /></section>
-        <section id="tension" style={{ height: 898, left: 100, position: 'absolute', top: 2938, width: 1440 }}><Frame3 /></section>
-        <section id="validation-plan" style={{ height: 854, left: 100, position: 'absolute', top: 3884, width: 1440 }}><Frame4 /></section>
-        <section id="validation-method" style={{ height: 898, left: 100, position: 'absolute', top: 4830, width: 1440 }}><Frame5 /></section>
-        <section id="findings" style={{ height: 898, left: 100, position: 'absolute', top: 5776, width: 1440 }}><Frame6 /></section>
-        <section id="definition" style={{ height: 898, left: 100, position: 'absolute', top: 6722, width: 1440 }}><Frame7 /></section>
-        <section id="experience-shift" style={{ height: 1090, left: 100, position: 'absolute', top: 7668, width: 1440 }}><Frame8 /></section>
-        <section id="solution" style={{ height: 898, left: 100, position: 'absolute', top: 8946.25, width: 1440 }}><Frame9 /></section>
-        <section id="context" style={{ height: 898, left: 100, position: 'absolute', top: 9892.25, width: 1440 }}><Frame10 /></section>
-        <section id="constraints" style={{ height: 898, left: 100, position: 'absolute', top: 10838.25, width: 1440 }}><Frame11 /></section>
-        <section id="node-operations" style={{ height: 972.25, left: 100, position: 'absolute', top: 11784.25, width: 1440 }}>
+      <ResponsiveArtboard height={15168.5} label="Idea Tree Skill" width={1440}>
+        <div className={styles.frames} style={{ background: '#fafaf8', height: 15168.5, position: 'relative', width: 1440 }}>
+        <section id="overview" style={{ height: 898, left: 0, position: 'absolute', top: 100, width: 1440 }}><Frame0 /></section>
+        <section id="problem" style={{ height: 898, left: 0, position: 'absolute', top: 1046, width: 1440 }}><Frame1 /></section>
+        <section id="hypothesis" style={{ height: 898, left: 0, position: 'absolute', top: 1992, width: 1440 }}><Frame2 /></section>
+        <section id="tension" style={{ height: 898, left: 0, position: 'absolute', top: 2938, width: 1440 }}><Frame3 /></section>
+        <section id="validation-plan" style={{ height: 854, left: 0, position: 'absolute', top: 3884, width: 1440 }}><Frame4 /></section>
+        <section id="validation-method" style={{ height: 898, left: 0, position: 'absolute', top: 4830, width: 1440 }}><Frame5 /></section>
+        <section id="findings" style={{ height: 898, left: 0, position: 'absolute', top: 5776, width: 1440 }}><Frame6 /></section>
+        <section id="definition" style={{ height: 898, left: 0, position: 'absolute', top: 6722, width: 1440 }}><Frame7 /></section>
+        <section id="experience-shift" style={{ height: 1090, left: 0, position: 'absolute', top: 7668, width: 1440 }}><Frame8 /></section>
+        <section id="solution" style={{ height: 898, left: 0, position: 'absolute', top: 8946.25, width: 1440 }}><Frame9 /></section>
+        <section id="context" style={{ height: 898, left: 0, position: 'absolute', top: 9892.25, width: 1440 }}><Frame10 /></section>
+        <section id="constraints" style={{ height: 898, left: 0, position: 'absolute', top: 10838.25, width: 1440 }}><Frame11 /></section>
+        <section id="node-operations" style={{ height: 972.25, left: 0, position: 'absolute', top: 11784.25, width: 1440 }}>
           <Frame12 />
           <div className={styles.operations}>
             <div className={styles.operationCards}>
@@ -65,8 +65,8 @@ export default function IdeaPage() {
             </div>
           </div>
         </section>
-        <section id="frontend" style={{ height: 1318, left: 100, position: 'absolute', top: 12804.5, width: 1440 }}><Frame13 /></section>
-        <section id="delivery" style={{ height: 898, left: 100, position: 'absolute', top: 14170.5, width: 1440 }}><Frame14 /></section>
+        <section id="frontend" style={{ height: 1318, left: 0, position: 'absolute', top: 12804.5, width: 1440 }}><Frame13 /></section>
+        <section id="delivery" style={{ height: 898, left: 0, position: 'absolute', top: 14170.5, width: 1440 }}><Frame14 /></section>
         </div>
       </ResponsiveArtboard>
     </CanvasProjectLayout>

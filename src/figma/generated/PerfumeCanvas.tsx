@@ -70,7 +70,7 @@ export default function PortfolioPerfumeLabRedesignProjectSnapshotOpportunity() 
         <p className="[word-break:break-word] absolute font-['Work_Sans:Regular'] font-normal h-[10px] leading-[1.25] left-[842px] text-[#6e4d2e] text-[15px] top-[835px] w-[444px]" data-node-id="58:28">
           Concept image · scent profile · character archive
         </p>
-        <div className="absolute h-[539px] left-[741px] shadow-[0px_13px_22.4px_0px_rgba(0,0,0,0.18)] top-[242px] w-[627px]" data-node-id="314:1144" data-name="image 416">
+        <div className="absolute h-[539px] left-[741px] top-[242px] w-[627px]" data-node-id="314:1144" data-name="image 416">
           <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImage416} />
         </div>
         <div className="absolute content-stretch flex h-[60px] items-start left-[72px] top-[7px] w-[1296px]" data-node-id="502:466" data-name="PERFUME LAB / Directory Axis">

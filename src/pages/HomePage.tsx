@@ -1,20 +1,11 @@
 import { useEffect } from 'react'
-import { Link } from 'react-router-dom'
 import HomeCanvas from '../figma/generated/HomeCanvas'
-import ProductOverview from '../figma/generated/ProductOverview'
 import { ResponsiveArtboard } from '../figma/ResponsiveArtboard'
 import { assetsByNode } from '../data/assetManifest'
 import { applyPageMeta } from '../lib/pageMeta'
 import styles from './HomePage.module.css'
 
 const homeImage = assetsByNode['21:2']?.[0]?.src
-
-const productHotspots = [
-  { label: '打开香迹档案', path: '/projects/perfume-lab', left: 80, width: 255 },
-  { label: '打开 Pals Go', path: '/projects/pals-go', left: 408, width: 264 },
-  { label: '打开 Idea Tree Skill', path: '/projects/idea-tree', left: 797, width: 274 },
-  { label: '打开 Coze 气味可视化工作流', path: '/projects/odor-land', left: 1130, width: 261 },
-]
 
 export default function HomePage() {
   useEffect(() => {
@@ -33,14 +24,6 @@ export default function HomePage() {
         <HomeCanvas />
         <a aria-label="发送邮件至 13187688338@163.com" className={styles.emailHotspot} href="mailto:13187688338@163.com" />
         <span className={styles.indexAnchor} id="work-index" />
-      </ResponsiveArtboard>
-      <ResponsiveArtboard height={1321} label="AI 产品项目总览" width={1440}>
-        <ProductOverview />
-        <div className={styles.productHotspots}>
-          {productHotspots.map((item) => (
-            <Link aria-label={item.label} key={item.path} style={{ left: item.left, width: item.width }} to={item.path} />
-          ))}
-        </div>
       </ResponsiveArtboard>
     </main>
   )

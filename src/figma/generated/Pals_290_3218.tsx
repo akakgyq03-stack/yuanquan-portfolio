@@ -11,7 +11,7 @@ export default function Web144043() {
           <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={img87Dd608Deb606Af7624Abbc1Eaa23E742} />
         </div>
       </div>
-      <div className="absolute bg-gradient-to-b from-[rgba(0,0,0,0.7)] h-[849.75px] left-[-45px] to-[rgba(102,102,102,0.7)] top-[33px] w-[1498.5px]" data-node-id="290:3221" />
+      <div className="absolute bg-gradient-to-b from-[rgba(0,0,0,0.7)] to-[rgba(102,102,102,0.7)]" data-node-id="290:3221" style={{ height: 864, left: 0, top: 0, width: 1440 }} />
       <div className="absolute bg-[#cffc48] content-stretch flex items-center justify-center left-[78.75px] px-[7.7px] top-[356.25px]" data-node-id="290:3222">
         <p className="[word-break:break-word] font-['Alibaba_PuHuiTi:Bold'] leading-[normal] not-italic relative shrink-0 text-[97.772px] text-[rgba(0,0,0,0.91)] whitespace-nowrap" data-node-id="290:3223">
           持续期

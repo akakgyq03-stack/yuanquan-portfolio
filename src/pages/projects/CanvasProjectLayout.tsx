@@ -31,7 +31,7 @@ export function CanvasProjectLayout({
     <main className={[styles.page, styles[tone]].join(' ')} id="main">
       <a className="skip-link" href="#project-start">跳到项目内容</a>
       <span className={styles.start} id="project-start" />
-      <ProjectChrome directory={directory} projectId={projectId} />
+      <ProjectChrome directory={project.showDirectory === false ? [] : directory} projectId={projectId} />
       {children}
     </main>
   )

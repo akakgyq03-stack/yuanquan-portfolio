@@ -44,14 +44,14 @@ export default function PalsPage() {
   return (
     <CanvasProjectLayout directory={directory} projectId="pals-go">
       <ResponsiveArtboard height={26415} label="Pals Go" width={1440}>
-        <div className={styles.frames} style={{ background: '#000', height: 26415, position: 'relative', width: 1440 }}>
+        <div className={styles.frames} style={{ background: '#fff', height: 26415, position: 'relative', width: 1440 }}>
         <section id="overview" style={{ height: 810, left: 0, position: 'absolute', top: 0, width: 1440 }}><Frame0 /></section>
         <section style={{ height: 846, left: 0, position: 'absolute', top: 855, width: 1440 }}><Frame1 /></section>
         <section style={{ height: 846, left: 0, position: 'absolute', top: 1746, width: 1440 }}><Frame2 /></section>
         <section style={{ height: 846, left: 0, position: 'absolute', top: 2637, width: 1440 }}><Frame3 /></section>
         <section style={{ height: 846, left: 0, position: 'absolute', top: 3528, width: 1440 }}><Frame4 /></section>
-        <section className={styles.phoneIntro} id="problem-insight" style={{ height: 864, left: 0, position: 'absolute', top: 4494, width: 1440 }}><Frame5 /></section>
-        <section style={{ height: 864, left: 0, position: 'absolute', top: 5403, width: 1440 }}><Frame6 /></section>
+        <section id="problem-insight" style={{ height: 864, left: 0, position: 'absolute', top: 4494, width: 1440 }}><Frame5 /></section>
+        <section className={styles.coreFeatures} style={{ height: 864, left: 0, position: 'absolute', top: 5403, width: 1440 }}><Frame6 /></section>
         <section style={{ height: 864, left: 0, position: 'absolute', top: 6312, width: 1440 }}><Frame7 /></section>
         <section id="competitive-research" style={{ height: 864, left: 0, position: 'absolute', top: 7221, width: 1440 }}><Frame8 /></section>
         <section id="product-strategy" style={{ height: 864, left: 0, position: 'absolute', top: 8130, width: 1440 }}><Frame9 /></section>

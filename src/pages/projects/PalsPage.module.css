@@ -2,14 +2,30 @@
   overflow: hidden;
 }
 
-.phoneIntro,
-.phoneIntro > div {
-  background: #fff !important;
+.coreFeatures::after {
+  background: rgba(255, 255, 255, .98);
+  border-bottom: 1px solid rgba(20, 20, 28, .1);
+  content: '';
+  height: 54px;
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  width: 1440px;
+  z-index: 50;
+}
+
+.coreFeatures [data-name="PALS GO / Progress"] {
+  z-index: 51;
 }
 
 .learningModel [data-node-id="488:727"],
 .learningModel [data-node-id="488:728"] {
   display: none;
+}
+
+.learningModel [data-node-id="290:2024"] > * {
+  transform: translateX(60px);
 }
 
 .modelLabels {

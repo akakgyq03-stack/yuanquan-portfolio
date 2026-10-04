@@ -1,0 +1,17 @@
+.productHotspots {
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+}
+
+.productHotspots a {
+  height: 570px;
+  pointer-events: auto;
+  position: absolute;
+  top: 420px;
+}
+
+.productHotspots a:focus-visible {
+  outline: 4px solid #fff;
+  outline-offset: -4px;
+}
