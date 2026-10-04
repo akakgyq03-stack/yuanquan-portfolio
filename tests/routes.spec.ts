@@ -63,6 +63,20 @@ test('Pals Go and Idea Tree directories mirror their in-page chapter axes', asyn
   await expect(ideaDirectory.getByRole('link')).toHaveText(['01项目概览', '02问题与假设', '03验证与洞察', '04产品定义', '05核心机制', '06原型与结果'])
 })
 
+test('Odor Land and Textual Scent Lab render their restored visual assets', async ({ page }) => {
+  await page.goto('/projects/odor-land', { waitUntil: 'networkidle' })
+  const topNote = page.locator('[data-node-id="490:631"] img')
+  await expect(topNote).toHaveAttribute('src', /odor-top-note\.png$/)
+  await expect.poll(() => topNote.evaluate((image: HTMLImageElement) => ({ height: image.naturalHeight, width: image.naturalWidth }))).toEqual({ height: 380, width: 280 })
+  const odorArtboard = page.locator('[aria-label="Odor Land 气味可视化工作流"]')
+  await expect(odorArtboard.locator(':scope > div').first()).toHaveCSS('height', '7716px')
+
+  await page.goto('/projects/textual-scent-lab#architecture', { waitUntil: 'networkidle' })
+  const architectureMap = page.getByRole('img', { name: '文字气味实验室信息架构图' })
+  await expect(architectureMap).toBeVisible()
+  await expect(architectureMap.locator('rect')).toHaveCount(24)
+})
+
 test('every project exposes return and previous/next controls, with directories only where designed', async ({ page }) => {
   for (const route of routes.slice(1)) {
     await page.goto(route, { waitUntil: 'networkidle' })

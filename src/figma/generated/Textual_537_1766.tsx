@@ -7,6 +7,72 @@ const imgFrame366812 = assetSrc('537:1766', 'imgFrame366812');
 const imgFrame3412 = assetSrc('537:1766', 'imgFrame3412');
 const imgArrow15 = assetSrc('537:1766', 'imgArrow15');
 
+const architectureNodes = [
+  { x: 77, y: 465, width: 164, height: 32, label: '主页' },
+  { x: 277, y: 229, width: 163, height: 27, label: '预测' },
+  { x: 277, y: 316, width: 163, height: 27, label: '探索' },
+  { x: 277, y: 675, width: 163, height: 27, label: '记录' },
+  { x: 522, y: 174, width: 163, height: 27, label: '文字预测' },
+  { x: 522, y: 223, width: 163, height: 33, label: '参数预测' },
+  { x: 531, y: 316, width: 163, height: 27, label: '选择感官域' },
+  { x: 531, y: 566, width: 163, height: 27, label: '选择香调' },
+  { x: 531, y: 675, width: 163, height: 27, label: '气味体验记录' },
+  { x: 531, y: 730, width: 163, height: 27, label: '我的嗅觉档案' },
+  { x: 903, y: 210, width: 164, height: 27, label: '颜色' },
+  { x: 903, y: 258, width: 164, height: 27, label: '味觉' },
+  { x: 903, y: 316, width: 164, height: 27, label: '温度' },
+  { x: 903, y: 366, width: 164, height: 27, label: '干湿' },
+  { x: 903, y: 425, width: 164, height: 27, label: '天气' },
+  { x: 903, y: 483, width: 164, height: 27, label: '性征' },
+  { x: 903, y: 566, width: 164, height: 27, label: '木质调' },
+  { x: 903, y: 621, width: 164, height: 27, label: '水生调' },
+  { x: 903, y: 675, width: 164, height: 27, label: '花香调' },
+  { x: 903, y: 748, width: 164, height: 27, label: '绿叶调' },
+  { x: 903, y: 806, width: 164, height: 27, label: '西普调' },
+  { x: 903, y: 865, width: 164, height: 27, label: '东方调' },
+  { x: 903, y: 915, width: 164, height: 28, label: '果香调' },
+  { x: 903, y: 974, width: 164, height: 27, label: '芳香调' },
+]
+
+function ArchitectureMap() {
+  return (
+    <svg
+      aria-label="文字气味实验室信息架构图"
+      className="absolute left-0 top-0"
+      height="1080"
+      role="img"
+      viewBox="0 0 1120 1080"
+      width="1120"
+    >
+      <title>文字气味实验室信息架构图</title>
+      <g fill="none" stroke="#1e1e1e" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.4">
+        <path d="M241 481 H260 M260 242 V689 M260 242 H277 M260 330 H277 M260 689 H277" />
+        <path d="M440 242 H480 V188 H522 M480 242 H522" />
+        <path d="M440 330 H531 M480 330 V580 H531" />
+        <path d="M440 689 H480 V744 H531 M480 689 H531" />
+        <path d="M694 330 H760 V224 H903 M760 272 H903 M760 330 H903 M760 380 H903 M760 439 H903 M760 497 H903" />
+        <path d="M694 580 H760 V988 H903 M760 580 H903 M760 635 H903 M760 689 H903 M760 762 H903 M760 820 H903 M760 879 H903 M760 929 H903" />
+      </g>
+      {architectureNodes.map((node) => (
+        <g key={node.label}>
+          <rect fill="#fff" height={node.height} rx="4" stroke="#1e1e1e" strokeWidth="1.4" width={node.width} x={node.x} y={node.y} />
+          <text
+            dominantBaseline="middle"
+            fill="#1e1e1e"
+            fontFamily="Inter, 'Microsoft YaHei UI', sans-serif"
+            fontSize="16"
+            textAnchor="middle"
+            x={node.x + node.width / 2}
+            y={node.y + node.height / 2 + 1}
+          >
+            {node.label}
+          </text>
+        </g>
+      ))}
+    </svg>
+  )
+}
+
 export default function Frame36682() {
   return (
     <div className="bg-white relative size-full" data-node-id="537:1766">
@@ -22,6 +88,7 @@ export default function Frame36682() {
       <p className="[word-break:break-word] absolute font-['Century_Gothic:Bold'] leading-[normal] left-[calc(40%+19.6px)] not-italic text-[#4d3d95] text-[48px] top-[28px] whitespace-nowrap" data-node-id="537:1770">
         Interface
       </p>
+      <ArchitectureMap />
       <div className="absolute h-[455px] left-[calc(35%+109.4px)] top-[calc(50%+45px)] w-[775px]" data-node-id="537:1771" data-name="Frame 371 2">
         <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgFrame3712} />
       </div>

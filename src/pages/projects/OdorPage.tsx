@@ -13,7 +13,7 @@ const directory = [
 export default function OdorPage() {
   return (
     <CanvasProjectLayout directory={directory} projectId="odor-land" tone="light">
-      <ResponsiveArtboard height={8119} label="Odor Land 气味可视化工作流" width={1440}>
+      <ResponsiveArtboard height={7716} label="Odor Land 气味可视化工作流" width={1440}>
         <div className={styles.canvas}><OdorCanvas /></div>
         <CanvasAnchors items={[
           { id: 'overview', top: 0 }, { id: 'imagination', top: 1000 }, { id: 'visual-relation', top: 2050 },
