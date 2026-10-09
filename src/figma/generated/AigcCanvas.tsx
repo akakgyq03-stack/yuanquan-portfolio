@@ -33,12 +33,17 @@ const imgImage423 = assetSrc('535:942', 'imgImage423');
 const imgImage424 = assetSrc('535:942', 'imgImage424');
 const imgImage425 = assetSrc('535:942', 'imgImage425');
 
-export default function Frame427323112() {
+export default function Frame427323112({
+  contentOffset = 0,
+}: {
+  contentOffset?: number
+}) {
   return (
     <div className="bg-black relative size-full" data-node-id="535:942">
       <div className="absolute h-[1085px] left-0 top-0 w-[1440px]" data-node-id="503:785" data-name="cj2 1">
         <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgCj21} />
       </div>
+      <div className="absolute inset-0" data-aigc-content="" style={{ transform: `translateY(${contentOffset}px)` }}>
       <div className="absolute h-[689px] left-[220px] top-[1493px] w-[1229px]" data-node-id="503:781" data-name="crawford586755_winter_plum_grove_background_a_large_grove_of__88b6b8de-78c0-4e24-8182-f9646b185f70_2 1">
         <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgCrawford586755WinterPlumGroveBackgroundALargeGroveOf88B6B8De78C04E248182F9646B185F7021} />
       </div>
@@ -162,6 +167,7 @@ export default function Frame427323112() {
       <p className="[word-break:break-word] absolute font-['Alibaba_PuHuiTi_3.0:45_Light'] h-[227px] leading-[45px] left-[444px] not-italic text-[24px] text-white top-[1097px] w-[1134px]" data-node-id="535:957">
         视频与图像内容创作
       </p>
+      </div>
     </div>
   );
 }

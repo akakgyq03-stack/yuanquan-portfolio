@@ -1,5 +1,6 @@
 import { assetSrc } from '../assetSrc'
 import { Link } from 'react-router-dom'
+import { prefetchRoute } from '../../lib/routePrefetch'
 
 const imgAigcPracticePreviewPlaceholder = assetSrc('21:2', 'imgAigcPracticePreviewPlaceholder');
 const imgPerfumeLabPreviewPlaceholder = assetSrc('21:2', 'imgPerfumeLabPreviewPlaceholder');
@@ -7,6 +8,8 @@ const imgPalsGoPreviewPlaceholder = assetSrc('21:2', 'imgPalsGoPreviewPlaceholde
 const imgResearchDataPreviewPlaceholder = assetSrc('21:2', 'imgResearchDataPreviewPlaceholder');
 const imgContentCommunityPreviewPlaceholder = assetSrc('21:2', 'imgContentCommunityPreviewPlaceholder');
 const imgContentCommunityPreviewPlaceholder1 = assetSrc('21:2', 'imgContentCommunityPreviewPlaceholder1');
+
+const prefetchAigc = () => prefetchRoute('/projects/aigc-creative-practice')
 
 export default function Portfolio00Home() {
   return (
@@ -119,7 +122,7 @@ export default function Portfolio00Home() {
           </div>
           <div className="content-stretch flex flex-col gap-[12px] items-start overflow-clip pt-[21px] relative shrink-0 w-[560px]" data-node-id="39:17" data-name="Related Work">
             <div className="content-stretch flex flex-col gap-[8px] items-start overflow-clip relative shrink-0 w-[520px]" data-node-id="39:18" data-name="Project List">
-              <Link aria-label="打开 AIGC 创作实践" className="[word-break:break-word] content-stretch flex items-start leading-[normal] overflow-clip relative shrink-0 w-[520px]" data-node-id="39:19" data-name="Project Line / AIGC Creative Practice" style={{ color: 'inherit', textDecoration: 'none' }} to="/projects/aigc-creative-practice">
+              <Link aria-label="打开 AIGC 创作实践" className="[word-break:break-word] content-stretch flex items-start leading-[normal] overflow-clip relative shrink-0 w-[520px]" data-node-id="39:19" data-name="Project Line / AIGC Creative Practice" onFocus={prefetchAigc} onMouseEnter={prefetchAigc} onPointerDown={prefetchAigc} style={{ color: 'inherit', textDecoration: 'none' }} to="/projects/aigc-creative-practice">
                 <p className="font-['Noto_Sans_SC:Medium'] font-medium relative shrink-0 text-[16px] text-white w-[420px]" data-node-id="39:20">
                   AIGC Creative Practice
                 </p>
@@ -127,13 +130,13 @@ export default function Portfolio00Home() {
                   P.1 ↗
                 </p>
               </Link>
-              <Link className="content-stretch flex items-start overflow-clip relative shrink-0 w-[520px]" data-node-id="39:22" data-name="Project Line / AIGC Content Account" style={{ color: 'inherit', textDecoration: 'none' }} to="/projects/aigc-creative-practice">
+              <Link className="content-stretch flex items-start overflow-clip relative shrink-0 w-[520px]" data-node-id="39:22" data-name="Project Line / AIGC Content Account" onFocus={prefetchAigc} onMouseEnter={prefetchAigc} onPointerDown={prefetchAigc} style={{ color: 'inherit', textDecoration: 'none' }} to="/projects/aigc-creative-practice">
                 <p className="[word-break:break-word] font-['Noto_Sans_SC:Regular'] font-normal leading-[normal] relative shrink-0 text-[#b8b8b8] text-[14px] w-[420px]" data-node-id="39:23">
                   AIGC Content Account
                 </p>
               </Link>
             </div>
-            <Link aria-label="打开 AIGC 项目缩略图" className="content-stretch flex flex-col gap-[8px] items-start overflow-clip relative shrink-0 w-[320px]" data-node-id="39:25" data-name="Preview / AIGC PRACTICE PREVIEW" style={{ color: 'inherit', textDecoration: 'none' }} to="/projects/aigc-creative-practice">
+            <Link aria-label="打开 AIGC 项目缩略图" className="content-stretch flex flex-col gap-[8px] items-start overflow-clip relative shrink-0 w-[320px]" data-node-id="39:25" data-name="Preview / AIGC PRACTICE PREVIEW" onFocus={prefetchAigc} onMouseEnter={prefetchAigc} onPointerDown={prefetchAigc} style={{ color: 'inherit', textDecoration: 'none' }} to="/projects/aigc-creative-practice">
               <div className="border border-[rgba(122,122,122,0.9)] border-solid h-[150px] relative shrink-0 w-[320px]" data-node-id="39:26" data-name="AIGC PRACTICE PREVIEW Placeholder">
                 <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgAigcPracticePreviewPlaceholder} />
               </div>
@@ -382,7 +385,7 @@ export default function Portfolio00Home() {
           </div>
         </div>
         <div className="bg-[#424242] h-px relative shrink-0 w-[1280px]" data-node-id="39:106" data-name="Divider" />
-        <Link aria-label="按顺序进入 AIGC 创作实践" style={{ color: '#b8b8b8', display: 'block', fontFamily: 'Noto Sans SC, sans-serif', fontSize: 20, letterSpacing: 0.6, margin: '16px 0 0', position: 'relative', textAlign: 'right', textDecoration: 'none', width: 1280 }} to="/projects/aigc-creative-practice">下滑按顺序浏览 <span aria-hidden="true" style={{ fontSize: 23, verticalAlign: 'sub' }}>↓</span></Link>
+        <Link aria-label="按顺序进入 AIGC 创作实践" onFocus={prefetchAigc} onMouseEnter={prefetchAigc} onPointerDown={prefetchAigc} style={{ color: '#b8b8b8', display: 'block', fontFamily: 'Noto Sans SC, sans-serif', fontSize: 20, letterSpacing: 0.6, margin: '16px 0 0', position: 'relative', textAlign: 'right', textDecoration: 'none', width: 1280 }} to="/projects/aigc-creative-practice">下滑按顺序浏览 <span aria-hidden="true" style={{ fontSize: 23, verticalAlign: 'sub' }}>↓</span></Link>
       </div>
       <div className="bg-[#2e2e2e] h-px relative shrink-0 w-[1280px]" data-node-id="21:115" data-name="Divider" />
     </div>

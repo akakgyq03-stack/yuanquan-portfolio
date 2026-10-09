@@ -1,3 +1,69 @@
+.aigcComposition {
+  position: relative;
+}
+
+.videoOverlay {
+  left: 50%;
+  position: absolute;
+  top: 15.804807%;
+  transform: translateX(-50%);
+  width: min(1440px, 100%);
+  z-index: 1;
+}
+
+.videoSection {
+  aspect-ratio: 16 / 9;
+  background: #000;
+  position: relative;
+  width: 100%;
+}
+
+.video {
+  background: #000;
+  display: block;
+  height: 100%;
+  object-fit: contain;
+  width: 100%;
+}
+
+.video:focus-visible,
+.videoError a:focus-visible {
+  outline: 4px solid #fff;
+  outline-offset: -4px;
+}
+
+.videoError {
+  align-items: center;
+  background: #000 url('/assets/media/aigc-watermelon-poster.webp') center / cover no-repeat;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  gap: 18px;
+  inset: 0;
+  justify-content: center;
+  line-height: 1.5;
+  position: absolute;
+}
+
+.videoError::before {
+  background: rgb(0 0 0 / 66%);
+  content: '';
+  inset: 0;
+  position: absolute;
+}
+
+.videoError p,
+.videoError a {
+  position: relative;
+}
+
+.videoError a {
+  color: #fff;
+  font-size: 16px;
+  text-underline-offset: 6px;
+}
+
 .productHotspots {
   inset: 0;
   pointer-events: none;

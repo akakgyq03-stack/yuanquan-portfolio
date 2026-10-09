@@ -1,0 +1,85 @@
+.demoButton {
+  align-items: center;
+  background: #c0efbf;
+  border: 1px solid #6e4d2e;
+  border-radius: 3px;
+  color: #6e4d2e;
+  cursor: pointer;
+  display: flex;
+  gap: 11px;
+  height: 48px;
+  justify-content: flex-start;
+  left: 1038px;
+  padding: 0 17px;
+  position: absolute;
+  top: 721px;
+  transition: background-color 160ms ease, color 160ms ease;
+  width: 292px;
+  z-index: 2;
+}
+
+.demoButton:hover {
+  background: #f5fff1;
+}
+
+.demoButton:focus-visible,
+.closeButton:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 3px;
+}
+
+.playIcon {
+  align-items: center;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  display: inline-flex;
+  flex: 0 0 24px;
+  height: 24px;
+  justify-content: center;
+  width: 24px;
+}
+
+.playIcon svg {
+  height: 11px;
+  margin-left: 2px;
+  width: 11px;
+}
+
+.buttonLabel {
+  font-family: 'Work Sans', 'Noto Sans SC', sans-serif;
+  font-size: 15px;
+  letter-spacing: 0.01em;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.notice {
+  align-items: center;
+  background: #6e4d2e;
+  border: 1px solid #c0efbf;
+  color: #c0efbf;
+  display: flex;
+  font-family: 'Work Sans', 'Noto Sans SC', sans-serif;
+  font-size: 13px;
+  gap: 14px;
+  left: 1038px;
+  line-height: 1.35;
+  padding: 10px 12px;
+  position: absolute;
+  top: 779px;
+  width: 292px;
+  z-index: 3;
+}
+
+.closeButton {
+  background: transparent;
+  border: 0;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  margin-left: auto;
+  padding: 2px 0;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  white-space: nowrap;
+}

@@ -19,7 +19,7 @@ for (const route of routes) {
     page.on('console', (message) => { if (message.type() === 'error') errors.push(message.text()) })
     page.on('pageerror', (error) => errors.push(error.message))
     page.on('response', (response) => { if (response.status() >= 400) errors.push(response.status() + ' ' + response.url()) })
-    await page.goto(route, { waitUntil: 'networkidle' })
+    await page.goto(route, { waitUntil: 'load' })
     await expect(page.locator('main')).toBeVisible()
     const state = await page.evaluate(() => ({
       failedImages: [...document.images].filter((image) => image.complete && image.naturalWidth === 0 && !image.src.endsWith('.svg')).map((image) => image.src),
@@ -89,7 +89,7 @@ test('Textual Scent Lab keeps the complete Figma technology framework', async ({
 
 test('every project exposes return and previous/next controls, with directories only where designed', async ({ page }) => {
   for (const route of routes.slice(1)) {
-    await page.goto(route, { waitUntil: 'networkidle' })
+    await page.goto(route, { waitUntil: 'domcontentloaded' })
     await expect(page.getByRole('navigation', { name: '项目导航' })).toBeVisible({ timeout: 15_000 })
     const directory = page.getByRole('navigation', { name: '项目目录' })
     if (route.endsWith('aigc-creative-practice') || route.endsWith('art-exhibitions')) {
@@ -109,6 +109,32 @@ test('home sequential link opens AIGC before the AI product overview', async ({ 
   await expect(canvases).toHaveCount(2)
   await expect(canvases.nth(0)).toHaveAttribute('aria-label', 'AIGC 创作实践')
   await expect(canvases.nth(1)).toHaveAttribute('aria-label', 'AI 产品项目总览')
+})
+
+test('AIGC video sits between the opening artwork and the original content', async ({ page }) => {
+  await page.goto('/projects/aigc-creative-practice')
+
+  const hero = page.locator('[data-node-id="503:785"]')
+  const videoSection = page.locator('[data-aigc-video]')
+  const video = videoSection.getByLabel('播放《合成大西瓜》AIGC 视频作品')
+  const originalContent = page.locator('[data-node-id="535:947"]')
+
+  await expect(videoSection).toBeVisible()
+  await expect(video).toHaveAttribute('controls', '')
+  await expect(video).toHaveAttribute('playsinline', '')
+  await expect(video).toHaveAttribute('preload', 'metadata')
+  await expect(video).toHaveAttribute('poster', '/assets/media/aigc-watermelon-poster.webp')
+  await expect(video).toHaveAttribute('src', /aigc\/hecheng-daxigua-2-20260916\.mp4$/)
+  await expect(video).not.toHaveAttribute('autoplay', '')
+  await expect(video).not.toHaveAttribute('loop', '')
+  await video.dispatchEvent('error')
+  await expect(videoSection.getByText('视频暂时无法加载')).toBeVisible()
+  await expect(videoSection.getByRole('link', { name: '在新窗口打开视频' })).toHaveAttribute('href', /aigc\/hecheng-daxigua-2-20260916\.mp4$/)
+
+  const positions = await Promise.all([hero, videoSection, originalContent].map((locator) => locator.boundingBox()))
+  expect(positions.every(Boolean)).toBeTruthy()
+  expect(positions[1]!.y).toBeCloseTo(positions[0]!.y + positions[0]!.height, 0)
+  expect(positions[2]!.y).toBeCloseTo(positions[1]!.y + positions[1]!.height, 0)
 })
 
 test('deep chapter links survive refresh and browser back', async ({ page }) => {
