@@ -133,14 +133,14 @@ export default function Portfolio00Home() {
                 </p>
               </Link>
             </div>
-            <div className="content-stretch flex flex-col gap-[8px] items-start overflow-clip relative shrink-0 w-[320px]" data-node-id="39:25" data-name="Preview / AIGC PRACTICE PREVIEW">
+            <Link aria-label="打开 AIGC 项目缩略图" className="content-stretch flex flex-col gap-[8px] items-start overflow-clip relative shrink-0 w-[320px]" data-node-id="39:25" data-name="Preview / AIGC PRACTICE PREVIEW" style={{ color: 'inherit', textDecoration: 'none' }} to="/projects/aigc-creative-practice">
               <div className="border border-[rgba(122,122,122,0.9)] border-solid h-[150px] relative shrink-0 w-[320px]" data-node-id="39:26" data-name="AIGC PRACTICE PREVIEW Placeholder">
                 <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgAigcPracticePreviewPlaceholder} />
               </div>
               <p className="[word-break:break-word] font-['Noto_Sans_SC:Regular'] font-normal leading-[normal] relative shrink-0 text-[#7a7a7a] text-[10px] w-[320px]" data-node-id="39:27">
                 AIGC PRACTICE PREVIEW
               </p>
-            </div>
+            </Link>
           </div>
         </div>
         <div className="bg-[#424242] h-px relative shrink-0 w-[1280px]" data-node-id="39:28" data-name="Divider" />
@@ -163,7 +163,7 @@ export default function Portfolio00Home() {
             <div className="[word-break:break-word] content-stretch flex flex-col gap-[8px] items-start leading-[normal] overflow-clip relative shrink-0 w-[520px]" data-node-id="39:36" data-name="Project List">
               <Link className="content-stretch flex items-start overflow-clip relative shrink-0 w-[520px]" data-node-id="39:37" data-name="Project Line / Perfume Lab" style={{ color: 'inherit', textDecoration: 'none' }} to="/projects/perfume-lab">
                 <p className="font-['Noto_Sans_SC:Medium'] font-medium relative shrink-0 text-[16px] text-white w-[420px]" data-node-id="39:38">
-                  香迹档案
+                  香迹档案（AI 叙事与感官创作工具）
                 </p>
                 <p className="font-['Noto_Sans_SC:Regular'] font-normal relative shrink-0 text-[#b8b8b8] text-[12px] text-right w-[100px]" data-node-id="39:39">
                   P.02 ↗
@@ -186,7 +186,7 @@ export default function Portfolio00Home() {
                 </p>
               </Link>
             </div>
-            <div className="content-stretch flex flex-col gap-[8px] items-start overflow-clip relative shrink-0 w-[320px]" data-node-id="39:46" data-name="Preview / PERFUME LAB PREVIEW">
+            <Link aria-label="打开香迹档案项目缩略图" className="content-stretch flex flex-col gap-[8px] items-start overflow-clip relative shrink-0 w-[320px]" data-node-id="39:46" data-name="Preview / PERFUME LAB PREVIEW" style={{ color: 'inherit', textDecoration: 'none' }} to="/projects/perfume-lab">
               <div className="border border-[rgba(122,122,122,0.9)] border-solid h-[150px] relative shrink-0 w-[320px]" data-node-id="39:47" data-name="PERFUME LAB PREVIEW Placeholder">
                 <div className="absolute inset-0 overflow-hidden pointer-events-none">
                   <img alt="" className="absolute h-[260.56%] left-[-2.64%] max-w-none top-[-57.34%] w-[105.09%]" src={imgPerfumeLabPreviewPlaceholder} />
@@ -195,7 +195,7 @@ export default function Portfolio00Home() {
               <p className="[word-break:break-word] font-['Noto_Sans_SC:Regular'] font-normal leading-[normal] relative shrink-0 text-[#7a7a7a] text-[10px] w-[320px]" data-node-id="39:48">
                 PERFUME LAB PREVIEW
               </p>
-            </div>
+            </Link>
           </div>
         </div>
         <div className="bg-[#424242] h-px relative shrink-0 w-[1280px]" data-node-id="39:49" data-name="Divider" />
@@ -218,7 +218,7 @@ export default function Portfolio00Home() {
             <div className="[word-break:break-word] content-stretch flex flex-col gap-[8px] items-start leading-[normal] overflow-clip relative shrink-0 w-[520px]" data-node-id="39:57" data-name="Project List">
               <Link className="content-stretch flex items-start overflow-clip relative shrink-0 w-[520px]" data-node-id="39:58" data-name="Project Line / Pals Go" style={{ color: 'inherit', textDecoration: 'none' }} to="/projects/pals-go">
                 <p className="font-['Noto_Sans_SC:Medium'] font-medium relative shrink-0 text-[16px] text-white w-[420px]" data-node-id="39:59">
-                  Pals Go
+                  Pals Go（羽毛球运动训练APP）
                 </p>
                 <p className="font-['Noto_Sans_SC:Regular'] font-normal relative shrink-0 text-[#b8b8b8] text-[12px] text-right w-[100px]" data-node-id="39:60">
                   P.03 ↗
@@ -249,14 +249,14 @@ export default function Portfolio00Home() {
                 </p>
               </Link>
             </div>
-            <div className="content-stretch flex flex-col gap-[8px] items-start overflow-clip relative shrink-0 w-[320px]" data-node-id="39:70" data-name="Preview / PALS GO PREVIEW">
+            <Link aria-label="打开 Pals Go 项目缩略图" className="content-stretch flex flex-col gap-[8px] items-start overflow-clip relative shrink-0 w-[320px]" data-node-id="39:70" data-name="Preview / PALS GO PREVIEW" style={{ color: 'inherit', textDecoration: 'none' }} to="/projects/pals-go">
               <div className="border border-[rgba(122,122,122,0.9)] border-solid h-[150px] relative shrink-0 w-[320px]" data-node-id="39:71" data-name="PALS GO PREVIEW Placeholder">
                 <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgPalsGoPreviewPlaceholder} />
               </div>
               <p className="[word-break:break-word] font-['Noto_Sans_SC:Regular'] font-normal leading-[normal] relative shrink-0 text-[#7a7a7a] text-[10px] w-[320px]" data-node-id="39:72">
                 PALS GO PREVIEW
               </p>
-            </div>
+            </Link>
           </div>
         </div>
         <div className="bg-[#424242] h-px relative shrink-0 w-[1280px]" data-node-id="39:73" data-name="Divider" />
@@ -286,14 +286,14 @@ export default function Portfolio00Home() {
                 </p>
               </Link>
             </div>
-            <div className="content-stretch flex flex-col gap-[8px] items-start overflow-clip relative shrink-0 w-[320px]" data-node-id="39:85" data-name="Preview / RESEARCH / DATA PREVIEW">
+            <Link aria-label="打开 Pals Go 用户研究缩略图" className="content-stretch flex flex-col gap-[8px] items-start overflow-clip relative shrink-0 w-[320px]" data-node-id="39:85" data-name="Preview / RESEARCH / DATA PREVIEW" style={{ color: 'inherit', textDecoration: 'none' }} to="/projects/pals-go#research">
               <div className="border border-[rgba(122,122,122,0.9)] border-solid h-[150px] relative shrink-0 w-[320px]" data-node-id="39:86" data-name="RESEARCH / DATA PREVIEW Placeholder">
                 <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgResearchDataPreviewPlaceholder} />
               </div>
               <p className="[word-break:break-word] font-['Noto_Sans_SC:Regular'] font-normal leading-[normal] relative shrink-0 text-[#7a7a7a] text-[10px] w-[320px]" data-node-id="39:87">
                 RESEARCH / DATA PREVIEW
               </p>
-            </div>
+            </Link>
           </div>
         </div>
         <div className="bg-[#424242] h-px relative shrink-0 w-[1280px]" data-node-id="39:88" data-name="Divider" />
@@ -322,7 +322,7 @@ export default function Portfolio00Home() {
                 </p>
               </Link>
             </div>
-            <div className="content-stretch flex flex-col gap-[8px] items-start overflow-clip relative shrink-0 w-[320px]" data-node-id="39:103" data-name="Preview / CONTENT / COMMUNITY PREVIEW">
+            <Link aria-label="打开 Pals Go 运营缩略图" className="content-stretch flex flex-col gap-[8px] items-start overflow-clip relative shrink-0 w-[320px]" data-node-id="39:103" data-name="Preview / CONTENT / COMMUNITY PREVIEW" style={{ color: 'inherit', textDecoration: 'none' }} to="/projects/pals-go#operation">
               <div className="border border-[rgba(122,122,122,0.9)] border-solid h-[150px] relative shrink-0 w-[320px]" data-node-id="39:104" data-name="CONTENT / COMMUNITY PREVIEW Placeholder">
                 <div className="absolute inset-0 overflow-hidden pointer-events-none">
                   <img alt="" className="absolute h-[300.94%] left-0 max-w-none top-[-183.82%] w-full" src={imgContentCommunityPreviewPlaceholder} />
@@ -331,7 +331,7 @@ export default function Portfolio00Home() {
               <p className="[word-break:break-word] font-['Noto_Sans_SC:Regular'] font-normal leading-[normal] relative shrink-0 text-[#7a7a7a] text-[10px] w-[320px]" data-node-id="39:105">
                 CONTENT / COMMUNITY PREVIEW
               </p>
-            </div>
+            </Link>
           </div>
         </div>
         <div className="content-stretch flex gap-[40px] items-start overflow-clip pb-[30px] relative shrink-0 w-[1280px]" data-node-id="565:48102" data-name="Capability Row / 6">
@@ -369,7 +369,7 @@ export default function Portfolio00Home() {
                 </p>
               </Link>
             </div>
-            <div className="content-stretch flex flex-col gap-[8px] items-start overflow-clip relative shrink-0 w-[320px]" data-node-id="565:48113" data-name="Preview / CONTENT / COMMUNITY PREVIEW">
+            <Link aria-label="打开艺术展览作品缩略图" className="content-stretch flex flex-col gap-[8px] items-start overflow-clip relative shrink-0 w-[320px]" data-node-id="565:48113" data-name="Preview / CONTENT / COMMUNITY PREVIEW" style={{ color: 'inherit', textDecoration: 'none' }} to="/projects/art-exhibitions">
               <div className="border border-[rgba(122,122,122,0.9)] border-solid h-[150px] relative shrink-0 w-[320px]" data-node-id="565:48114" data-name="CONTENT / COMMUNITY PREVIEW Placeholder">
                 <div className="absolute inset-0 overflow-hidden pointer-events-none">
                   <img alt="" className="absolute h-[288.42%] left-[-4%] max-w-none top-[-57.49%] w-[108.16%]" src={imgContentCommunityPreviewPlaceholder1} />
@@ -378,7 +378,7 @@ export default function Portfolio00Home() {
               <p className="[word-break:break-word] font-['Noto_Sans_SC:Regular'] font-normal leading-[normal] relative shrink-0 text-[#7a7a7a] text-[10px] w-[320px]" data-node-id="565:48115">
                 CONTENT / COMMUNITY PREVIEW
               </p>
-            </div>
+            </Link>
           </div>
         </div>
         <div className="bg-[#424242] h-px relative shrink-0 w-[1280px]" data-node-id="39:106" data-name="Divider" />
