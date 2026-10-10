@@ -1,5 +1,5 @@
 .page { background: #050505; min-height: 100vh; }
 .emailHotspot { height: 58px; left: 80px; position: absolute; top: 56px; width: 620px; }
-.indexAnchor { left: 0; position: absolute; top: 770px; }
+.indexAnchor { height: 1px; left: 0; position: absolute; scroll-snap-align: start; scroll-snap-stop: normal; top: 770px; width: 1px; }
 .page [data-node-id="21:31"] a:focus-visible,
 .emailHotspot:focus-visible { outline: 4px solid #fff; outline-offset: -4px; }
