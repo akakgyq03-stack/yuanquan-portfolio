@@ -87,6 +87,26 @@ test('Textual Scent Lab keeps the complete Figma technology framework', async ({
   await expect(framework.getByText('基于 TD 的气味感官可视化')).toBeVisible()
 })
 
+test('Textual Scent Lab interface images open in an accessible lightbox', async ({ page }) => {
+  await page.goto('/projects/textual-scent-lab#architecture', { waitUntil: 'networkidle' })
+
+  const interfaces = page.locator('#architecture img[data-lightbox-src]')
+  await expect(interfaces).toHaveCount(5)
+  await interfaces.first().click()
+
+  const dialog = page.getByRole('dialog', { name: '文字气味实验室交互界面：动态变化与感官可视化' })
+  await expect(dialog).toBeVisible()
+  await expect(dialog.getByRole('button', { name: '关闭大图' })).toBeFocused()
+  await expect(dialog.locator('img')).toHaveAttribute('src', /2301e8a4740e350e87a6\.(avif|webp)$/)
+
+  await page.keyboard.press('Escape')
+  await expect(dialog).toHaveCount(0)
+  await expect(interfaces.first()).toBeFocused()
+
+  await interfaces.nth(1).press('Enter')
+  await expect(page.getByRole('dialog', { name: '文字气味实验室交互界面：信息架构与输入流程' })).toBeVisible()
+})
+
 test('every project exposes return and previous/next controls, with directories only where designed', async ({ page }) => {
   for (const route of routes.slice(1)) {
     await page.goto(route, { waitUntil: 'domcontentloaded' })

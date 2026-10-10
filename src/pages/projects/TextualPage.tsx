@@ -4,6 +4,7 @@ import Frame2 from '../../figma/generated/Textual_537_1570'
 import Frame3 from '../../figma/generated/Textual_537_1631'
 import Frame4 from '../../figma/generated/Textual_537_1698'
 import Frame5 from '../../figma/generated/Textual_537_1766'
+import { ImageLightboxScope } from '../../components/ImageLightbox'
 import { ResponsiveArtboard } from '../../figma/ResponsiveArtboard'
 import { CanvasProjectLayout } from './CanvasProjectLayout'
 
@@ -26,10 +27,9 @@ export default function TextualPage() {
         <section id="technology" style={{ height: 1080, left: 0, position: 'absolute', top: 2160, width: 3456 }}><Frame2 /></section>
         <section id="concept" style={{ height: 1080, left: 0, position: 'absolute', top: 3240, width: 3456 }}><Frame3 /></section>
         <section id="visualization" style={{ height: 1080, left: 0, position: 'absolute', top: 4320, width: 3456 }}><Frame4 /></section>
-        <section id="architecture" style={{ height: 1080, left: 0, position: 'absolute', top: 5400, width: 3456 }}><Frame5 /></section>
+        <section id="architecture" style={{ height: 1080, left: 0, position: 'absolute', top: 5400, width: 3456 }}><ImageLightboxScope><Frame5 /></ImageLightboxScope></section>
         </div>
       </ResponsiveArtboard>
     </CanvasProjectLayout>
   )
 }
-

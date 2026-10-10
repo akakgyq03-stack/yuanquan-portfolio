@@ -90,21 +90,21 @@ export default function Frame36682() {
       </p>
       <ArchitectureMap />
       <div className="absolute h-[455px] left-[calc(35%+109.4px)] top-[calc(50%+45px)] w-[775px]" data-node-id="537:1771" data-name="Frame 371 2">
-        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgFrame3712} />
+        <img alt="文字气味实验室交互界面：动态变化与感官可视化" className="absolute inset-0 max-w-none object-cover size-full" data-lightbox-src={imgFrame3712} role="button" tabIndex={0} src={imgFrame3712} />
       </div>
       <div className="absolute h-[455px] left-[calc(35%+109.4px)] top-[103px] w-[775px]" data-node-id="537:1772" data-name="Frame 375 2">
-        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgFrame3752} />
+        <img alt="文字气味实验室交互界面：信息架构与输入流程" className="absolute inset-0 max-w-none object-cover size-full" data-lightbox-src={imgFrame3752} role="button" tabIndex={0} src={imgFrame3752} />
       </div>
       <div className="absolute h-[437px] left-[calc(70%+123.8px)] top-[calc(50%+63px)] w-[768px]" data-node-id="537:1773" data-name="Frame 377 2">
-        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgFrame3772} />
+        <img alt="文字气味实验室交互界面：预测结果与感官图表" className="absolute inset-0 max-w-none object-cover size-full" data-lightbox-src={imgFrame3772} role="button" tabIndex={0} src={imgFrame3772} />
       </div>
       <div className="absolute h-[453px] left-[calc(65%+6.6px)] top-[calc(50%+47px)] w-[196px]" data-node-id="537:1774" data-name="Frame 36681 2">
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <img alt="" className="absolute h-[95.54%] left-[3.04%] max-w-none top-[3.28%] w-[387.84%]" src={imgFrame366812} />
+        <div className="absolute inset-0 overflow-hidden">
+          <img alt="文字气味实验室交互界面：预测结果画面" className="absolute h-[95.54%] left-[3.04%] max-w-none top-[3.28%] w-[387.84%]" data-lightbox-src={imgFrame366812} role="button" tabIndex={0} src={imgFrame366812} />
         </div>
       </div>
       <div className="absolute h-[506px] left-[calc(65%+39.6px)] top-[55px] w-[863px]" data-node-id="537:1775" data-name="Frame 341 2">
-        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgFrame3412} />
+        <img alt="文字气味实验室交互界面：多页面工作台" className="absolute inset-0 max-w-none object-cover size-full" data-lightbox-src={imgFrame3412} role="button" tabIndex={0} src={imgFrame3412} />
       </div>
       <div className="[word-break:break-word] absolute font-['Inter:Medium'] font-medium leading-[0] left-[calc(60%-14.6px)] not-italic text-[#1e1e1e] text-[16px] top-[47px] tracking-[-0.176px] whitespace-nowrap" data-node-id="537:1778">
         <p className="leading-[1.5] mb-0">暂停/开始</p>
