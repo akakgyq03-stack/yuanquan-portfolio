@@ -3,4 +3,4 @@
 .light { background: #f5f3ea; color: #171713; }
 .start { left: 0; position: absolute; top: 0; }
 .anchors { inset: 0; pointer-events: none; position: absolute; }
-.anchors span { height: 1px; left: 0; position: absolute; scroll-margin-top: 70px; scroll-snap-align: start; scroll-snap-stop: always; width: 1px; }
+.anchors span { left: 0; position: absolute; scroll-margin-top: 70px; }

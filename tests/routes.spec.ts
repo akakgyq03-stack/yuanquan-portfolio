@@ -47,16 +47,15 @@ test('Perfume demo button keeps its video entry 30px higher', async ({ page }) =
   await expect(page.getByRole('button', { name: '点击观看完整demo' })).toHaveCSS('top', '691px')
 })
 
-test('site uses mandatory scroll snapping for project chapters', async ({ page }) => {
+test('site leaves browser scrolling unsnapped', async ({ page }) => {
   await page.goto('/')
-  await expect.poll(() => page.evaluate(() => getComputedStyle(document.documentElement).scrollSnapType)).toBe('y mandatory')
+  await expect.poll(() => page.evaluate(() => getComputedStyle(document.documentElement).scrollSnapType)).toBe('none')
 
   await page.goto('/projects/pals-go', { waitUntil: 'networkidle' })
   const palsSections = page.locator('[aria-label="Pals Go"] section')
   await expect(palsSections.first()).toBeVisible()
-  await expect(palsSections.first()).toHaveCSS('scroll-snap-align', 'start')
-  await expect(palsSections.first()).toHaveCSS('scroll-snap-stop', 'always')
-  await expect(page.locator('[aria-label="Pals Go"]')).toHaveCSS('scroll-snap-stop', 'always')
+  await expect(palsSections.first()).toHaveCSS('scroll-snap-align', 'none')
+  await expect(page.locator('[aria-label="Pals Go"]')).toHaveCSS('scroll-snap-align', 'none')
 })
 
 test('Pals Go and Idea Tree directories mirror their in-page chapter axes', async ({ page }) => {
@@ -212,7 +211,6 @@ test('reduced motion disables smooth scrolling', async ({ page }) => {
   await page.emulateMedia({ reducedMotion: 'reduce' })
   await page.goto('/projects/perfume-lab')
   await expect.poll(() => page.evaluate(() => getComputedStyle(document.documentElement).scrollBehavior)).toBe('auto')
-  await expect.poll(() => page.evaluate(() => getComputedStyle(document.documentElement).scrollSnapType)).toBe('none')
 })
 
 test('unknown route shows custom 404', async ({ page }) => {

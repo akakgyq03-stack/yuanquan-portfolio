@@ -1,15 +1,13 @@
 .host {
   height: var(--scaled-height);
-  overflow: clip;
+  overflow: hidden;
   position: relative;
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
   width: 100%;
 }
 
 .canvas {
   left: 50%;
-  overflow: clip;
+  overflow: hidden;
   position: absolute;
   top: 0;
   transform-origin: top center;
