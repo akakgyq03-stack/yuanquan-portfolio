@@ -24,21 +24,24 @@ const productHotspots = [
   { label: '打开 Coze 气味可视化工作流', path: '/projects/odor-land', left: 1130, width: 261 },
 ]
 
+const AIGC_ARTBOARD_HEIGHT = 6520
+const AIGC_VIDEO_TOP = 5710
+
 export default function AigcPage() {
   return (
     <CanvasProjectLayout directory={directory} projectId="aigc-creative-practice">
       <div className={styles.aigcComposition}>
-        <ResponsiveArtboard height={5899} label="AIGC 创作实践" width={1440}>
+        <ResponsiveArtboard height={AIGC_ARTBOARD_HEIGHT} label="AIGC 创作实践" width={1440}>
           <AigcCanvas />
           <CanvasAnchors items={[
             { id: 'overview', top: 0 }, { id: 'content-account', top: 1030 },
             { id: 'scene-generation', top: 1450 }, { id: 'character-consistency', top: 3000 },
             { id: 'video-practice', top: 4300 }, { id: 'final-work', top: 5400 },
           ]} />
+          <div className={styles.videoOverlay} style={{ top: AIGC_VIDEO_TOP }}>
+            <AigcVideo src={AIGC_VIDEO_URL} />
+          </div>
         </ResponsiveArtboard>
-        <div className={styles.videoOverlay}>
-          <AigcVideo src={AIGC_VIDEO_URL} />
-        </div>
       </div>
       <ResponsiveArtboard height={1321} label="AI 产品项目总览" width={1440}>
         <ProductOverview />

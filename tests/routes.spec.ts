@@ -170,6 +170,9 @@ test('AIGC video sits in the closing black space of the image section', async ({
 
   const positions = await Promise.all([lastImage, videoSection, productOverview].map((locator) => locator.boundingBox()))
   expect(positions.every(Boolean)).toBeTruthy()
+  const canvas = await page.getByLabel('AIGC 创作实践').boundingBox()
+  expect(canvas).toBeTruthy()
+  expect(positions[1]!.width).toBeCloseTo(canvas!.width, 0)
   expect(positions[1]!.y).toBeGreaterThanOrEqual(positions[0]!.y + positions[0]!.height - 2)
   expect(positions[1]!.y + positions[1]!.height).toBeLessThanOrEqual(positions[2]!.y + 2)
 })

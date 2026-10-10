@@ -1,13 +1,7 @@
-.aigcComposition {
-  position: relative;
-}
-
 .videoOverlay {
-  bottom: 0;
-  left: 50%;
+  left: 0;
   position: absolute;
-  transform: translateX(-50%);
-  width: min(400px, 28vw);
+  width: 1440px;
   z-index: 1;
 }
 
