@@ -111,13 +111,13 @@ test('home sequential link opens AIGC before the AI product overview', async ({ 
   await expect(canvases.nth(1)).toHaveAttribute('aria-label', 'AI 产品项目总览')
 })
 
-test('AIGC video sits between the opening artwork and the original content', async ({ page }) => {
+test('AIGC video sits in the closing black space of the image section', async ({ page }) => {
   await page.goto('/projects/aigc-creative-practice')
 
-  const hero = page.locator('[data-node-id="503:785"]')
   const videoSection = page.locator('[data-aigc-video]')
   const video = videoSection.getByLabel('播放《合成大西瓜》AIGC 视频作品')
-  const originalContent = page.locator('[data-node-id="535:947"]')
+  const lastImage = page.locator('[data-node-id="503:776"]')
+  const productOverview = page.getByLabel('AI 产品项目总览')
 
   await expect(videoSection).toBeVisible()
   await expect(video).toHaveAttribute('controls', '')
@@ -131,10 +131,10 @@ test('AIGC video sits between the opening artwork and the original content', asy
   await expect(videoSection.getByText('视频暂时无法加载')).toBeVisible()
   await expect(videoSection.getByRole('link', { name: '在新窗口打开视频' })).toHaveAttribute('href', /aigc\/hecheng-daxigua-2-20260916\.mp4$/)
 
-  const positions = await Promise.all([hero, videoSection, originalContent].map((locator) => locator.boundingBox()))
+  const positions = await Promise.all([lastImage, videoSection, productOverview].map((locator) => locator.boundingBox()))
   expect(positions.every(Boolean)).toBeTruthy()
-  expect(positions[1]!.y).toBeCloseTo(positions[0]!.y + positions[0]!.height, 0)
-  expect(positions[2]!.y).toBeCloseTo(positions[1]!.y + positions[1]!.height, 0)
+  expect(positions[1]!.y).toBeGreaterThanOrEqual(positions[0]!.y + positions[0]!.height - 2)
+  expect(positions[1]!.y + positions[1]!.height).toBeLessThanOrEqual(positions[2]!.y + 2)
 })
 
 test('deep chapter links survive refresh and browser back', async ({ page }) => {
