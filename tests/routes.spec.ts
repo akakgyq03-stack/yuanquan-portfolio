@@ -42,6 +42,11 @@ test('project directory links jump to the requested Figma section', async ({ pag
   await expect(page.locator('#product-value')).toBeInViewport()
 })
 
+test('Perfume demo button keeps its video entry 30px higher', async ({ page }) => {
+  await page.goto('/projects/perfume-lab')
+  await expect(page.getByRole('button', { name: '点击观看完整demo' })).toHaveCSS('top', '691px')
+})
+
 test('Pals Go and Idea Tree directories mirror their in-page chapter axes', async ({ page }) => {
   await page.goto('/projects/pals-go')
   const palsSections = page.locator('[aria-label="Pals Go"] section')
