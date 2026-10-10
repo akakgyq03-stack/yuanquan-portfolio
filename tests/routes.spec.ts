@@ -55,7 +55,8 @@ test('site uses mandatory scroll snapping for project chapters', async ({ page }
   const palsSections = page.locator('[aria-label="Pals Go"] section')
   await expect(palsSections.first()).toBeVisible()
   await expect(palsSections.first()).toHaveCSS('scroll-snap-align', 'start')
-  await expect(palsSections.first()).toHaveCSS('scroll-snap-stop', 'normal')
+  await expect(palsSections.first()).toHaveCSS('scroll-snap-stop', 'always')
+  await expect(page.locator('[aria-label="Pals Go"]')).toHaveCSS('scroll-snap-stop', 'always')
 })
 
 test('Pals Go and Idea Tree directories mirror their in-page chapter axes', async ({ page }) => {

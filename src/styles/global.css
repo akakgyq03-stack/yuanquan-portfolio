@@ -14,7 +14,7 @@ body { margin:0; min-width:320px; overflow-x:hidden; padding-left:env(safe-area-
 body, button { font-family:inherit; }
 a { color:inherit; }
 button, a { -webkit-tap-highlight-color:transparent; }
-#main section:not([data-aigc-video]) { scroll-snap-align:start; scroll-snap-stop:normal; }
+#main section:not([data-aigc-video]) { scroll-snap-align:start; scroll-snap-stop:always; }
 ::selection { background:#fff; color:#050505; }
 :focus-visible { outline:2px solid var(--accent,#fff); outline-offset:4px; }
 

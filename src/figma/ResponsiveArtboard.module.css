@@ -3,7 +3,7 @@
   overflow: clip;
   position: relative;
   scroll-snap-align: start;
-  scroll-snap-stop: normal;
+  scroll-snap-stop: always;
   width: 100%;
 }
 
